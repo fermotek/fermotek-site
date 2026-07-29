@@ -99,8 +99,8 @@
     box-shadow:0 1px 0 rgba(23,168,201,.25);
   }
   .nav{display:flex; align-items:center; justify-content:space-between; height:76px; gap:16px; flex-wrap:nowrap;}
-  .brand{display:flex; align-items:center; gap:12px; color:var(--white);}
-  .brand-logo{height:40px; width:auto; display:block;}
+  .brand{display:flex; align-items:center; gap:12px; color:var(--white); flex-shrink:0;}
+  .brand-logo{height:40px; width:auto; display:block; flex-shrink:0;}
   @media (max-width:520px){.brand-logo{height:32px;}}
   nav.links{display:flex; gap:2px; align-items:center; flex-wrap:nowrap;}
   nav.links a{white-space:nowrap;}
