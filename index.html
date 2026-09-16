@@ -316,6 +316,20 @@
   .tabbtn.active{background:var(--grad-brand); color:#fff; border-color:transparent; box-shadow:var(--shadow-glow-cyan);}
   .tabpanel{display:none;}
   .tabpanel.active{display:block;}
+  .real-tabs{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px;}
+  .real-tab{
+    padding:11px 20px; border-radius:999px; border:1px solid var(--steel-300); background:#fff;
+    font-weight:600; font-size:.92rem; cursor:pointer; transition:background .2s, color .2s, box-shadow .2s, border-color .2s;
+  }
+  .real-tab:hover{border-color:var(--cyan-500); color:var(--cyan-500);}
+  .real-tab.active{background:var(--grad-brand); color:#fff; border-color:transparent; box-shadow:var(--shadow-glow-cyan);}
+  .real-grid{display:none; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:16px;}
+  .real-grid.active{display:grid;}
+  .real-grid img{
+    width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:var(--radius); border:1px solid var(--steel-300);
+    box-shadow:var(--shadow-1); transition:transform .28s var(--ease), box-shadow .28s var(--ease);
+  }
+  .real-grid img:hover{transform:translateY(-4px) scale(1.015); box-shadow:var(--shadow-2);}
 
   /* ---------- Model cards ---------- */
   .model-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:22px;}
@@ -905,6 +919,7 @@
         </div>
       </div>
       <a href="#pourquoi">Fermotek</a>
+      <a href="#nos-realisations">Nos réalisations</a>
       <a href="#catalogues">Catalogues</a>
       <a href="#devis">Contact</a>
     </nav>
@@ -931,6 +946,7 @@
   <a href="#personnalisation">Personnalisation</a>
   <a href="#gamme-alu">Aménagements extérieurs</a>
   <a href="#pourquoi">Fermotek</a>
+  <a href="#nos-realisations">Nos réalisations</a>
   <a href="#catalogues">Catalogues</a>
   <a href="#devis">Contact</a>
   <a href="#configurateur" class="btn btn-amber">Chiffrez votre porte</a>
@@ -960,108 +976,18 @@
       <div class="badge-float bottom">🛡 Garantie 10 ans</div>
       <div class="door-opening">
         <div class="hero-slides" id="heroSlides">
-          <img class="slide active" data-ref="alizee" data-label="Porte de garage · Alizée" alt="Porte de garage Alizée">
-          <img class="slide" data-ref="artik" data-label="Porte de garage · Artik" alt="Porte de garage Artik">
-          <img class="slide" data-ref="galerne" data-label="Porte de garage · Galerne" alt="Porte de garage Galerne">
-          <img class="slide" data-ref="zephir" data-label="Porte industrielle · Zéphir" alt="Porte de garage Zéphir">
-          <img class="slide" data-ref="portail" data-label="Portails aluminium sur mesure" alt="Portail aluminium sur mesure">
-          <div class="slide slide-illustration" data-label="Rideaux métalliques">
-            <svg class="shutter-scene" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#2B3A44"/>
-                  <stop offset="1" stop-color="#182831"/>
-                </linearGradient>
-                <linearGradient id="boxGrad2" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#B8C2C9"/>
-                  <stop offset="1" stop-color="#8A97A0"/>
-                </linearGradient>
-                <linearGradient id="slatGradA" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#A9B4BC"/>
-                  <stop offset=".5" stop-color="#8E9AA3"/>
-                  <stop offset="1" stop-color="#77848D"/>
-                </linearGradient>
-                <linearGradient id="slatGradB" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#96A2AB"/>
-                  <stop offset=".5" stop-color="#7C8890"/>
-                  <stop offset="1" stop-color="#647079"/>
-                </linearGradient>
-                <linearGradient id="floorGrad" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#0E1A21"/>
-                  <stop offset="1" stop-color="#060D12"/>
-                </linearGradient>
-                <radialGradient id="lightGlow" cx="50%" cy="0%" r="75%">
-                  <stop offset="0" stop-color="#FFD87A" stop-opacity=".55"/>
-                  <stop offset="1" stop-color="#FFD87A" stop-opacity="0"/>
-                </radialGradient>
-              </defs>
-
-              <!-- Wall / storefront facade -->
-              <rect x="0" y="0" width="800" height="500" fill="url(#wallGrad)"/>
-              <rect x="0" y="0" width="800" height="500" fill="#0B1116" opacity=".25"/>
-              <!-- Subtle brick/panel joints on facade -->
-              <g stroke="#0F1D25" stroke-width="2" opacity=".35">
-                <line x1="0" y1="70" x2="800" y2="70"/>
-                <line x1="0" y1="150" x2="800" y2="150"/>
-                <line x1="200" y1="0" x2="200" y2="150"/>
-                <line x1="600" y1="0" x2="600" y2="150"/>
-              </g>
-
-              <!-- Floor -->
-              <rect x="0" y="430" width="800" height="70" fill="url(#floorGrad)"/>
-              <rect x="0" y="430" width="800" height="4" fill="#000" opacity=".4"/>
-
-              <!-- Warm sign light above -->
-              <ellipse cx="400" cy="40" rx="260" ry="80" fill="url(#lightGlow)"/>
-
-              <!-- Shutter box header -->
-              <rect x="120" y="96" width="560" height="34" rx="6" fill="url(#boxGrad2)"/>
-              <rect x="120" y="96" width="560" height="34" rx="6" fill="#0B1116" opacity=".08"/>
-              <rect x="120" y="122" width="560" height="6" fill="#5C6971"/>
-
-              <!-- Side guide rails -->
-              <rect x="110" y="126" width="16" height="304" rx="3" fill="#4A555D"/>
-              <rect x="674" y="126" width="16" height="304" rx="3" fill="#4A555D"/>
-              <rect x="113" y="126" width="4" height="304" fill="#66727A" opacity=".6"/>
-              <rect x="677" y="126" width="4" height="304" fill="#66727A" opacity=".6"/>
-
-              <!-- Slats -->
-              <g>
-                <rect x="126" y="132" width="548" height="26" rx="2" fill="url(#slatGradA)"/>
-                <rect x="126" y="132" width="548" height="4" fill="#C7D0D6" opacity=".55"/>
-                <rect x="126" y="164" width="548" height="26" rx="2" fill="url(#slatGradB)"/>
-                <rect x="126" y="196" width="548" height="26" rx="2" fill="url(#slatGradA)"/>
-                <rect x="126" y="196" width="548" height="4" fill="#C7D0D6" opacity=".45"/>
-                <rect x="126" y="228" width="548" height="26" rx="2" fill="url(#slatGradB)"/>
-                <rect x="126" y="260" width="548" height="26" rx="2" fill="url(#slatGradA)"/>
-                <rect x="126" y="260" width="548" height="4" fill="#C7D0D6" opacity=".45"/>
-                <rect x="126" y="292" width="548" height="26" rx="2" fill="url(#slatGradB)"/>
-                <rect x="126" y="324" width="548" height="26" rx="2" fill="url(#slatGradA)"/>
-                <rect x="126" y="324" width="548" height="4" fill="#C7D0D6" opacity=".45"/>
-                <rect x="126" y="356" width="548" height="26" rx="2" fill="url(#slatGradB)"/>
-                <rect x="126" y="388" width="548" height="26" rx="2" fill="url(#slatGradA)"/>
-                <rect x="126" y="388" width="548" height="4" fill="#C7D0D6" opacity=".45"/>
-                <rect x="126" y="420" width="548" height="16" rx="2" fill="#5C6971"/>
-              </g>
-
-              <!-- Vertical shading for cylindrical slat look -->
-              <rect x="126" y="132" width="548" height="304" fill="url(#wallGrad)" opacity=".05"/>
-
-              <!-- Bottom lock bar -->
-              <rect x="126" y="426" width="548" height="10" rx="3" fill="#333F47"/>
-              <circle cx="400" cy="431" r="5" fill="#1B2329"/>
-
-              <!-- Ground reflection -->
-              <rect x="126" y="436" width="548" height="18" fill="#0E1A21" opacity=".7"/>
-            </svg>
-          </div>
+          <img class="slide active" src="images/realisations/thumbs/porte-garage-04.jpg" data-label="Porte de garage · pose chez un client Fermotek" alt="Porte de garage sectionnelle blanche installée par Fermotek" loading="eager">
+          <img class="slide" src="images/realisations/thumbs/porte-garage-09.jpg" data-label="Porte de garage · finition anthracite" alt="Porte de garage sectionnelle anthracite installée par Fermotek" loading="lazy">
+          <img class="slide" src="images/realisations/thumbs/portail-01.jpg" data-label="Portails aluminium sur mesure" alt="Portail aluminium anthracite installé par Fermotek" loading="lazy">
+          <img class="slide" src="images/realisations/thumbs/portail-06.jpg" data-label="Portails · large choix de styles" alt="Portail aluminium sur mesure installé par Fermotek" loading="lazy">
+          <img class="slide" src="images/realisations/thumbs/rideau-metallique-01.jpg" data-label="Rideaux métalliques" alt="Rideau métallique installé par Fermotek" loading="lazy">
+          <img class="slide" src="images/realisations/thumbs/portail-08.jpg" data-label="Clôtures assorties au portail" alt="Clôture et portail aluminium assortis, réalisation Fermotek" loading="lazy">
           <img class="slide" data-ref="gardecorps" data-label="Garde-corps aluminium sur mesure" alt="Garde-corps aluminium sur mesure">
-          <img class="slide" data-ref="cloture" data-label="Clôtures aluminium assorties" alt="Clôture aluminium assortie au portail">
           <img class="slide" data-ref="veranda" data-label="Vérandas &amp; jardins d'hiver" alt="Véranda et jardin d'hiver">
           <img class="slide" data-ref="paroi" data-label="Parois &amp; baies coulissantes" alt="Paroi et baie coulissante">
         </div>
         <div class="hero-caption-wrap">
-          <p class="hero-caption" id="heroCaption"><span>Fermotek</span>Porte de garage · Alizée</p>
+          <p class="hero-caption" id="heroCaption"><span>Fermotek</span>Porte de garage · pose chez un client Fermotek</p>
           <div class="hero-dots" id="heroDots"></div>
         </div>
         <div class="door-glow"></div>
@@ -1894,6 +1820,67 @@
         <div class="body"><h4>Porte de garage battante</h4><p>Nouvelle gamme battante 2 et 3 vantaux, Galerne et Bora.</p></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ NOS RÉALISATIONS ============ -->
+<section id="nos-realisations">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nos réalisations</span>
+      <h2>Des chantiers réels, chez nos clients</h2>
+      <p>Une sélection de portes de garage, portails, rideaux métalliques et clôtures installés par nos équipes — de vraies photos de chantier, pas des rendus 3D.</p>
+    </div>
+
+    <div class="real-tabs reveal" role="tablist">
+      <button class="real-tab active" type="button" data-real-tab="garage">Portes de garage</button>
+      <button class="real-tab" type="button" data-real-tab="portail">Portails</button>
+      <button class="real-tab" type="button" data-real-tab="rideau">Rideaux métalliques</button>
+      <button class="real-tab" type="button" data-real-tab="cloture">Clôtures &amp; portillons</button>
+    </div>
+
+    <div class="real-grid active" id="real-panel-garage" data-real-panel="garage">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-01.jpg" alt="Porte de garage sectionnelle blanche installée par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-02.jpg" alt="Porte de garage sectionnelle imitation bois installée par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-03.jpg" alt="Porte de garage sectionnelle anthracite installée par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-04.jpg" alt="Porte de garage sectionnelle blanche avec hublot, installation Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-05.jpg" alt="Double porte de garage sectionnelle blanche installée par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-06.jpg" alt="Porte de garage sectionnelle cintrée avec portillon intégré, Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-07.jpg" alt="Porte de garage sectionnelle blanche avec portillon, vue intérieure, Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-08.jpg" alt="Porte de garage sectionnelle gris anthracite sur façade brique, Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-09.jpg" alt="Porte de garage sectionnelle anthracite sur maison en briques, Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-10.jpg" alt="Porte de garage sectionnelle claire sur façade brique, installation Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-11.jpg" alt="Porte de garage sectionnelle anthracite avec hublots, installation Fermotek">
+    </div>
+
+    <div class="real-grid" id="real-panel-portail" data-real-panel="portail">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-01.jpg" alt="Portail aluminium anthracite à lames horizontales installé par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-02.jpg" alt="Grand portail battant blanc à barreaudage installé par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-03.jpg" alt="Portail aluminium anthracite avec boîte aux lettres intégrée, Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-04.jpg" alt="Portail battant noir motorisé installé par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-05.jpg" alt="Portail aluminium anthracite cintré à barreaudage, Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-06.jpg" alt="Portail aluminium anthracite à motifs verticaux, installation Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-07.jpg" alt="Portail aluminium gris à lames diagonales motorisé, Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-08.jpg" alt="Portail imitation bois assorti à sa clôture, installation Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-09.jpg" alt="Portail aluminium anthracite cintré avec portillon assorti, Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-10.jpg" alt="Portail battant aluminium cintré installé par Fermotek">
+    </div>
+
+    <div class="real-grid" id="real-panel-rideau" data-real-panel="rideau">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-01.jpg" alt="Rideau métallique blanc installé sur bâtiment professionnel par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-02.jpg" alt="Rideau métallique anthracite installé sur façade brique par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-03.jpg" alt="Rideau métallique argenté installé sur bâtiment municipal par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-04.jpg" alt="Rideaux métalliques anthracite sur hangar agricole, installation Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-05.jpg" alt="Rideau métallique vert foncé installé sur bâtiment bois, Fermotek">
+    </div>
+
+    <div class="real-grid" id="real-panel-cloture" data-real-panel="cloture">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portillon-01.jpg" alt="Portillon aluminium gris anthracite installé par Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-08.jpg" alt="Portail et clôture assortis imitation bois, installation Fermotek">
+      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-02.jpg" alt="Grand portail et clôture à barreaudage blanc, installation Fermotek">
+    </div>
+
+    <p style="margin-top:26px; color:var(--ink-soft); font-size:.92rem;">Vous voulez voir d'autres exemples proches de votre projet ? Un conseiller Fermotek peut vous montrer des réalisations similaires à la vôtre.</p>
   </div>
 </section>
 
@@ -2832,13 +2819,7 @@
     if(!heroSlides) return;
 
     var sourceMap = {
-      alizee: 'img[alt="Porte de garage sectionnelle Alizée"]',
-      artik: 'img[alt="Porte de garage sectionnelle latérale Artik"]',
-      galerne: 'img[alt="Porte de garage sectionnelle battante Galerne"]',
-      zephir: 'img[alt="Porte de garage industrielle Zéphir"]',
-      portail: 'img[alt="Portail traditionnel City Fermotek, aspect fer forgé"]',
       gardecorps: 'img[alt="Garde-corps aluminium sur mesure Fermotek"]',
-      cloture: 'img[alt="Clôture aluminium Fermotek assortie au portail"]',
       veranda: 'img[alt^="Vérandas"]',
       paroi: 'img[alt^="Parois"]'
     };
@@ -4212,6 +4193,21 @@
         var wasOpen = item.classList.contains('open');
         item.parentElement.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
         if(!wasOpen){ item.classList.add('open'); }
+      });
+    });
+  })();
+
+  /* ---------- Nos réalisations : onglets ---------- */
+  (function(){
+    var btns = document.querySelectorAll('.real-tab');
+    if(!btns.length) return;
+    btns.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        btns.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        document.querySelectorAll('.real-grid').forEach(function(p){ p.classList.remove('active'); });
+        var panel = document.getElementById('real-panel-' + btn.dataset.realTab);
+        if(panel) panel.classList.add('active');
       });
     });
   })();
