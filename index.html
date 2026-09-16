@@ -1518,7 +1518,7 @@
 
     <!-- Styles & finitions -->
     <h3 id="styles-finitions" style="font-size:1.3rem; margin:46px 0 4px; scroll-margin-top:150px;">Les styles &amp; finitions</h3>
-    <p style="color:var(--ink-soft); font-size:.92rem; max-width:74ch; margin-bottom:18px;">Chaque style existe en plusieurs niveaux de gamme (Village, Fluviale, Pierre Gemme) selon vos besoins d'esthétique et de budget.</p>
+    <p style="color:var(--ink-soft); font-size:.92rem; max-width:74ch; margin-bottom:18px;">Chaque style existe en plusieurs niveaux de gamme (Village, Pierres Gemmes, Beryl, Var, Fluviale, City) selon vos besoins d'esthétique et de budget.</p>
         <div class="filter-bar" id="styleFilterBar">
       <span class="filter-chip active" data-filter="all">Tous les styles</span>
       <span class="filter-chip" data-filter="ajoure">Ajouré / semi-ajouré</span>
@@ -2080,10 +2080,12 @@
           <h3>Quelle gamme vous intéresse ?</h3>
           <p class="sub">Si vous hésitez encore, choisissez "Je ne sais pas encore" — votre conseiller vous orientera.</p>
           <div class="config-options" id="portail-opt-gamme">
-            <div class="config-card" data-value="Village"><b>Village</b><span>Milieu de gamme, tenon-mortaise vissé</span></div>
-            <div class="config-card" data-value="Fluviale"><b>Fluviale</b><span>Haut de gamme, tenon-mortaise vissé</span></div>
-            <div class="config-card" data-value="Pierre Gemme"><b>Pierre Gemme</b><span>Haut de gamme, mécano-soudé</span></div>
-            <div class="config-card" data-value="City"><b>City</b><span>Traditionnel soudé, aspect fer forgé</span></div>
+            <div class="config-card" data-value="Village"><b>Village</b><span>Contemporaine, assemblage vissé</span></div>
+            <div class="config-card" data-value="Pierres Gemmes"><b>Pierres Gemmes</b><span>Contemporaine, mécano-soudé</span></div>
+            <div class="config-card" data-value="Beryl"><b>Beryl</b><span>Contemporain, mécano-soudé</span></div>
+            <div class="config-card" data-value="Var"><b>Var</b><span>Mêmes designs que Beryl, mécano-vissé</span></div>
+            <div class="config-card" data-value="Fluviale"><b>Fluviale</b><span>Contemporaine, lames larges vissées</span></div>
+            <div class="config-card" data-value="City"><b>City</b><span>Traditionnel soudé et forgé</span></div>
             <div class="config-card" data-value="Gamme Régionale (économique)"><b>Gamme Régionale</b><span>Le + économique</span></div>
             <div class="config-card" data-value="Je ne sais pas encore"><b>Je ne sais pas</b></div>
           </div>
@@ -2522,7 +2524,7 @@
     <div class="faq-list reveal">
       <div class="faq-item open">
         <div class="faq-q"><span>Quel est le délai pour un portail 100% sur mesure ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></div>
-        <div class="faq-a"><p>Comptez en moyenne 6 à 10 semaines de fabrication pour un portail sur mesure (gammes Village, Fluviale, Pierre Gemme ou City), et 3 à 4 semaines pour la gamme Régionale en RAL 7016. Un conseiller Fermotek vous donne un délai précis après étude de votre projet.</p></div>
+        <div class="faq-a"><p>Comptez en moyenne 6 à 10 semaines de fabrication pour un portail sur mesure (gammes Village, Pierres Gemmes, Beryl, Var, Fluviale ou City), et 3 à 4 semaines pour la gamme Régionale en RAL 7016. Un conseiller Fermotek vous donne un délai précis après étude de votre projet.</p></div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Quelle garantie sur les portails aluminium Fermotek ?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></div>
@@ -2577,8 +2579,8 @@
         </div>
         <div class="cat-body">
           <h4>Portails Aluminium</h4>
-          <p>Ajouré, semi-ajouré, plein, sur mesure : styles, coloris et gammes Village, Fluviale, Pierre Gemme.</p>
-          <span class="cat-meta">Catalogue 2026 · Résidentiel</span>
+          <p>Ajouré, semi-ajouré, plein, sur mesure : styles, coloris et gammes Village, Pierres Gemmes, Beryl, Var, Fluviale.</p>
+          <span class="cat-meta">Catalogue Aluminium 2021 · Résidentiel</span>
           <a class="btn btn-cyan btn-sm" href="catalogues/catalogue-portails-aluminium.pdf" download>Télécharger le catalogue</a>
         </div>
       </div>
@@ -3237,60 +3239,79 @@
   (function(){
     var modelsByGamme = {
       "Village": [
-        {n:"Azurite", g:"Ajouré / semi-ajouré classique", p:"images/portails-modeles/village-azurite.jpg"},
-        {n:"Pomerol", g:"Ajouré / semi-ajouré classique", p:"images/portails-modeles/village-pomerol.jpg"},
-        {n:"Charente", g:"Ajouré / semi-ajouré classique", p:"images/portails-modeles/village-charente.jpg"},
-        {n:"Rivesaltes", g:"Semi-ajouré design", p:"images/portails-modeles/village-rivesaltes.jpg"},
-        {n:"Quartz", g:"Semi-ajouré design", p:"images/portails-modeles/village-quartz.jpg"},
-        {n:"Chinon", g:"Semi-ajouré design", p:"images/portails-modeles/village-chinon.jpg"},
-        {n:"Fluorite F20", g:"Semi-ajouré design", p:"images/portails-modeles/village-fluorite-f20.jpg"},
-        {n:"Margaux", g:"Plein classique", p:"images/portails-modeles/village-margaux.jpg"},
-        {n:"Mareuil", g:"Plein classique", p:"images/portails-modeles/village-mareuil.jpg"},
-        {n:"Pyrope", g:"Plein classique", p:"images/portails-modeles/village-pyrope.jpg"},
-        {n:"Corbières", g:"Semi-ajouré découpe laser", p:"images/portails-modeles/village-corbieres-laser.jpg"},
-        {n:"Corbières (Aluminox)", g:"Plein décors Aluminox", p:"images/portails-modeles/village-corbieres-aluminox.jpg"},
-        {n:"Médoc", g:"Modèle lame persiennée", p:"images/portails-modeles/village-medoc.jpg"},
-        {n:"Verdon", g:"Modèle lame persiennée", p:"images/portails-modeles/village-verdon.jpg"},
-        {n:"Adour", g:"Modèle lame persiennée", p:"images/portails-modeles/village-adour.jpg"},
+        {n:"Gensac", g:"Ajouré vertical", p:"", k:""},
+        {n:"Pomerol", g:"Ajouré vertical serré", p:"", k:""},
+        {n:"Lalande", g:"Semi-ajouré, barreaudage fin", p:"", k:""},
+        {n:"Margaux", g:"Plein, coulissant ou battant", p:"", k:""},
+        {n:"Mareuil", g:"Ajouré horizontal fin", p:"", k:""},
+        {n:"Lussac", g:"Design — lames Z ou brise-vue", p:"", k:""},
+        {n:"Sauternes", g:"Design — tôle micro-perforée en option", p:"", k:""},
+        {n:"Chablis", g:"Design — soubassement lames pleines", p:"", k:""},
+        {n:"Rivesaltes", g:"Design — extrémités lames Z/brise-vue", p:"", k:""},
+        {n:"Chinon", g:"Design — barreaux centraux inclinés", p:"", k:""},
+        {n:"Fitou", g:"Design graphique", p:"", k:""},
         {n:"Je ne sais pas encore", g:"", p:"", k:""}
       ],
       "Fluviale": [
-        {n:"Garonne", g:"Plein horizontal", p:"images/portails-modeles/fluv-garonne.jpg"},
-        {n:"Dordogne", g:"Semi-ajouré horizontal", p:"images/portails-modeles/fluv-dordogne.jpg"},
-        {n:"Rhône", g:"Ajouré horizontal", p:"images/portails-modeles/fluv-rhone.jpg"},
-        {n:"Seine", g:"Plein vertical", p:"images/portails-modeles/fluv-seine.jpg"},
-        {n:"Loire", g:"Semi-ajouré vertical", p:"images/portails-modeles/fluv-loire.jpg"},
-        {n:"Saône", g:"Ajouré vertical", p:"images/portails-modeles/fluv-saone.jpg"},
-        {n:"Meuse", g:"Tôle perforée", p:"images/portails-modeles/fluv-meuse.jpg"},
-        {n:"Isère", g:"Mixte tôle perforée et lames", p:"images/portails-modeles/fluv-isere.jpg"},
-        {n:"Haute-Saône", g:"Ajouré design", p:"images/portails-modeles/fluv-haute-saone.jpg"},
-        {n:"Allier", g:"Lames brise-vue", p:"images/portails-modeles/fluv-allier.jpg"},
+        {n:"Rhin", g:"Plein vertical", p:"", k:""},
+        {n:"Rhône", g:"Ajouré / plein, plusieurs formes", p:"", k:""},
+        {n:"Seine", g:"Plein / ajouré horizontal", p:"", k:""},
+        {n:"Loire", g:"Ajouré, lames basses à 45° en option", p:"", k:""},
+        {n:"Yères", g:"Plein horizontal", p:"", k:""},
+        {n:"Garonne", g:"Ajouré vertical", p:"", k:""},
+        {n:"Dives", g:"Tôle pleine 30/10", p:"", k:""},
+        {n:"Touques", g:"Tôle perforée ronde", p:"", k:""},
+        {n:"Sarthe", g:"Design graphique (croisillons)", p:"", k:""},
+        {n:"Oise", g:"Design graphique", p:"", k:""},
+        {n:"Marne", g:"Design graphique", p:"", k:""},
+        {n:"Durance", g:"Design à rayons", p:"", k:""},
+        {n:"Charente", g:"Lames larges 200x20", p:"", k:""},
+        {n:"Drac", g:"Barreaux verticaux, jeu réduit", p:"", k:""},
+        {n:"Adour", g:"Lames persiennées type Z", p:"", k:""},
+        {n:"Verdon", g:"Lames persiennées type Z", p:"", k:""},
+        {n:"Gave", g:"Lames persiennées type Z", p:"", k:""},
         {n:"Je ne sais pas encore", g:"", p:"", k:""}
       ],
-      "Pierre Gemme": [
-        {n:"Azurite", g:"Ajouré / semi-ajouré classique", p:"images/portails-modeles/pg-azurite.jpg"},
-        {n:"Pomerol", g:"Ajouré / semi-ajouré classique", p:"images/portails-modeles/pg-pomerol.jpg"},
-        {n:"Charente", g:"Ajouré / semi-ajouré classique", p:"images/portails-modeles/pg-charente.jpg"},
-        {n:"Rivesaltes", g:"Semi-ajouré design", p:"images/portails-modeles/pg-rivesaltes.jpg"},
-        {n:"Quartz", g:"Semi-ajouré design", p:"images/portails-modeles/pg-quartz.jpg"},
-        {n:"Chinon", g:"Semi-ajouré design", p:"images/portails-modeles/pg-chinon.jpg"},
-        {n:"Fluorite F20", g:"Semi-ajouré design", p:"images/portails-modeles/pg-fluorite-f20.jpg"},
-        {n:"Margaux", g:"Plein classique", p:"images/portails-modeles/pg-margaux.jpg"},
-        {n:"Mareuil", g:"Plein classique", p:"images/portails-modeles/pg-mareuil.jpg"},
-        {n:"Pyrope", g:"Plein classique", p:"images/portails-modeles/pg-pyrope.jpg"},
+      "Pierres Gemmes": [
+        {n:"Citrine", g:"Ajouré vertical", p:"", k:""},
+        {n:"Tourmaline", g:"Ajouré vertical, plusieurs formes", p:"", k:""},
+        {n:"Tanzanite", g:"Plein / ajouré, plusieurs formes", p:"", k:""},
+        {n:"Saphir", g:"Plein horizontal, décor Aluminox en option", p:"", k:""},
+        {n:"Topaze", g:"Ajouré vertical", p:"", k:""},
+        {n:"Péridot", g:"Ajouré vertical", p:"", k:""},
+        {n:"Opale", g:"Tôle pleine et perforée", p:"", k:""},
+        {n:"Cordierite", g:"Ajouré, cintré", p:"", k:""},
+        {n:"Améthyste", g:"Ajouré, cintré", p:"", k:""},
+        {n:"Iris", g:"Plein horizontal", p:"", k:""},
+        {n:"Aigue-Marine", g:"Cintré", p:"", k:""},
+        {n:"Pyrope", g:"Plein horizontal", p:"", k:""},
+        {n:"Rubis", g:"Lames inclinées", p:"", k:""},
+        {n:"Azurite", g:"Lames ajourées", p:"", k:""},
+        {n:"Amazonite", g:"Lames persiennées type Z", p:"", k:""},
+        {n:"Emeraude", g:"Lames persiennées type Z", p:"", k:""},
+        {n:"Je ne sais pas encore", g:"", p:"", k:""}
+      ],
+      "Beryl": [
+        {n:"Décor rond", g:"Réf. B1", p:"", k:""},
+        {n:"Décor à rangée de trous", g:"Réf. B2", p:"", k:""},
+        {n:"Décor asymétrique", g:"Réf. B3", p:"", k:""},
+        {n:"Lames pleines unies", g:"Réf. B4", p:"", k:""},
+        {n:"Numéro de domicile intégré", g:"Option toutes finitions", p:"", k:""},
+        {n:"Je ne sais pas encore", g:"", p:"", k:""}
+      ],
+      "Var": [
+        {n:"Décor rond", g:"Réf. V01 — même design que Beryl", p:"", k:""},
+        {n:"Décor à rangée de trous", g:"Réf. V02 — même design que Beryl", p:"", k:""},
+        {n:"Décor asymétrique", g:"Réf. V03 — même design que Beryl", p:"", k:""},
+        {n:"Lames pleines unies", g:"Réf. V04 — même design que Beryl", p:"", k:""},
+        {n:"Numéro de domicile intégré", g:"Option toutes finitions", p:"", k:""},
         {n:"Je ne sais pas encore", g:"", p:"", k:""}
       ],
       "City": [
-        {n:"Manhattan", g:"Plein horizontal", p:"images/portails-modeles/city-manhattan.jpg"},
-        {n:"Brooklyn", g:"Semi-ajouré horizontal", p:"images/portails-modeles/city-brooklyn.jpg"},
-        {n:"Queens", g:"Ajouré horizontal", p:"images/portails-modeles/city-queens.jpg"},
-        {n:"Bronx", g:"Plein vertical", p:"images/portails-modeles/city-bronx.jpg"},
-        {n:"Staten", g:"Semi-ajouré vertical", p:"images/portails-modeles/city-staten.jpg"},
-        {n:"Soho", g:"Ajouré vertical", p:"images/portails-modeles/city-soho.jpg"},
-        {n:"Harlem", g:"Tôle perforée", p:"images/portails-modeles/city-harlem.jpg"},
-        {n:"Williamsburg", g:"Mixte tôle perforée et lames", p:"images/portails-modeles/city-williamsburg.jpg"},
-        {n:"Bowery", g:"Découpe laser", p:"images/portails-modeles/city-bowery.jpg"},
-        {n:"Tribeca", g:"Lames brise-vue", p:"images/portails-modeles/city-tribeca.jpg"},
+        {n:"Collection Ivry", g:"Barreaudage classique, droit ou cintré", p:"", k:""},
+        {n:"Collection Vitry", g:"Barreaudage classique, avec ou sans motifs", p:"", k:""},
+        {n:"Collection Gentilly", g:"Barreaudage avec motifs et volutes", p:"", k:""},
+        {n:"Collection Cannisse", g:"Barreaudage aléatoire façon claire-voie", p:"", k:""},
         {n:"Je ne sais pas encore", g:"", p:"", k:""}
       ],
       "Gamme Régionale (économique)": [
@@ -3342,10 +3363,12 @@
     bindGroup('portail-opt-decor','decor');
 
     var gammeNotes = {
-      "Village": "Gamme <b>Village</b> — construction mécano-vissée (tenon-mortaise), milieu de gamme, excellent équilibre prix/qualité.",
-      "Pierre Gemme": "Gamme <b>Pierre Gemme</b> — mêmes designs que la gamme Village, mais en construction <b>mécano-soudée</b> (haut de gamme) : robustesse maximale, idéale pour les grandes dimensions et zones exposées au vent.",
-      "Fluviale": "Gamme <b>Fluviale</b> — construction mécano-vissée haut de gamme : épaisseurs d'aluminium renforcées, profondeur de gamme (bicolores, imitation bois).",
-      "City": "Gamme <b>City</b> — traditionnel mécano-soudé, aspect fer forgé à l'ancienne, sans entretien.",
+      "Village": "Gamme <b>Village</b> — construction contemporaine <b>assemblée et vissée</b> (tenon-mortaise), très large choix de designs, du classique ajouré aux lames Z ou brise-vue.",
+      "Pierres Gemmes": "Gamme <b>Pierres Gemmes</b> — construction contemporaine <b>mécano-soudée</b> : la plus large gamme de designs Fermotek, avec options tôle perforée, découpe laser et lames persiennées type Z.",
+      "Beryl": "Gamme <b>Beryl</b> — construction contemporaine <b>mécano-soudée</b>, décors Aluminox ou découpe laser en option, numéro de domicile intégrable. Mêmes designs que la gamme <b>Var</b>, en version vissée.",
+      "Var": "Gamme <b>Var</b> — mêmes designs que la gamme <b>Beryl</b>, en construction <b>mécano-vissée</b> (« Version Design »).",
+      "Fluviale": "Gamme <b>Fluviale</b> — construction contemporaine <b>mécano-vissée</b> à lames larges, plus de 15 designs inspirés des rivières de France, finitions bicolores en option.",
+      "City": "Gamme <b>City</b> — traditionnelle, <b>soudée et forgée</b>, aspect fer forgé à l'ancienne : collections Ivry, Vitry, Gentilly et Cannisse, barreaudage classique ou aléatoire.",
       "Gamme Régionale (économique)": "Gamme <b>Régionale</b> — l'entrée de gamme économique Fermotek, style régional classique."
     };
     function renderModelStep(){
