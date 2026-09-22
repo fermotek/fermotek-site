@@ -211,7 +211,7 @@
 
   /* Signature element: animated sectional door */
   .door-stage{
-    position:relative; aspect-ratio:4/5; border-radius:var(--radius);
+    position:relative; aspect-ratio:5/4; border-radius:var(--radius);
     background:linear-gradient(180deg,#0C2E44,#081C29);
     box-shadow:var(--shadow-2), 0 0 0 1px rgba(127,216,232,.12); overflow:hidden; border:1px solid rgba(255,255,255,.14);
   }
@@ -242,6 +242,7 @@
   .hero-slides{position:absolute; inset:0;}
   .hero-slides .slide{position:absolute; inset:0; opacity:0; transition:opacity 1.6s ease-in-out;}
   .hero-slides img.slide{width:100%; height:100%; object-fit:cover;}
+  .hero-slides img[data-ref="gardecorps"]{object-position:center 25%;}
   .hero-slides .slide.active{opacity:1;}
   .hero-slides::after{
     content:""; position:absolute; inset:0; pointer-events:none; z-index:2;
@@ -1007,7 +1008,7 @@
           <img class="slide" src="images/realisations/thumbs/porte-garage-09.jpg" data-label="Porte de garage · finition anthracite" alt="Porte de garage sectionnelle anthracite installée par Fermotek" loading="lazy">
           <img class="slide" src="images/realisations/thumbs/portail-01.jpg" data-label="Portails aluminium sur mesure" alt="Portail aluminium anthracite installé par Fermotek" loading="lazy">
           <img class="slide" src="images/realisations/thumbs/portail-06.jpg" data-label="Portails · large choix de styles" alt="Portail aluminium sur mesure installé par Fermotek" loading="lazy">
-          <img class="slide" src="images/realisations/thumbs/rideau-metallique-01.jpg" data-label="Rideaux métalliques" alt="Rideau métallique installé par Fermotek" loading="lazy">
+          <img class="slide" src="images/realisations/thumbs/rideau-metallique-02.jpg" data-label="Rideaux métalliques" alt="Rideau métallique installé par Fermotek" loading="lazy">
           <img class="slide" src="images/realisations/thumbs/portail-08.jpg" data-label="Clôtures assorties au portail" alt="Clôture et portail aluminium assortis, réalisation Fermotek" loading="lazy">
           <img loading="lazy" class="slide" data-ref="gardecorps" data-label="Garde-corps aluminium sur mesure" alt="Garde-corps aluminium sur mesure">
           <img loading="lazy" class="slide" data-ref="veranda" data-label="Vérandas &amp; jardins d'hiver" alt="Véranda et jardin d'hiver">
