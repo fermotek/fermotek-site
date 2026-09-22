@@ -584,6 +584,33 @@
   .config-card-photo{padding:10px 10px 16px; gap:8px;}
   .config-card-photo img{width:100%; height:92px; object-fit:contain; border-radius:10px; background:var(--steel-100);}
   .config-card-photo b{font-size:.82rem;}
+  .cfg-resume-banner{display:flex; align-items:center; gap:10px; flex-wrap:wrap; background:#EAF6FF; border:1px solid var(--cyan-500); color:var(--navy-950); font-size:.86rem; padding:10px 14px; border-radius:10px; margin-bottom:16px;}
+  .cfg-resume-banner .cfg-resume-restart{margin-left:auto; background:none; border:1px solid var(--navy-800); color:var(--navy-950); border-radius:6px; padding:4px 10px; font-size:.8rem; cursor:pointer;}
+  .cfg-resume-banner .cfg-resume-close{background:none; border:none; font-size:1.1rem; line-height:1; cursor:pointer; color:var(--ink-soft); padding:0 4px;}
+
+  /* ---- Floating CTA (devis + WhatsApp) ---- */
+  .floating-cta{position:fixed; right:18px; bottom:90px; z-index:60; display:flex; flex-direction:column; align-items:flex-end; gap:10px; opacity:0; pointer-events:none; transform:translateY(12px); transition:opacity .25s ease, transform .25s ease;}
+  .floating-cta.visible{opacity:1; pointer-events:auto; transform:translateY(0);}
+  .fcta-btn{display:flex; align-items:center; gap:8px; text-decoration:none; box-shadow:0 6px 18px rgba(10,20,40,.22); transition:transform .15s ease, box-shadow .15s ease;}
+  .fcta-btn:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(10,20,40,.28);}
+  .fcta-whatsapp{width:52px; height:52px; border-radius:50%; background:#25D366; color:#fff; justify-content:center; flex-shrink:0;}
+  .fcta-whatsapp svg{width:26px; height:26px;}
+  .fcta-devis{background:var(--amber-500); color:var(--navy-950); font-weight:700; font-size:.88rem; padding:13px 20px; border-radius:999px; white-space:nowrap;}
+  .fcta-devis svg{width:18px; height:18px; flex-shrink:0;}
+  @media (max-width:560px){
+    .floating-cta{right:12px; bottom:80px;}
+    .fcta-devis span{display:none;}
+    .fcta-devis{width:52px; height:52px; border-radius:50%; padding:0; justify-content:center;}
+  }
+
+  /* ---- Après votre demande ---- */
+  .apres-devis{margin-top:28px; padding-top:24px; border-top:1px solid var(--steel-200, #E2E6EA);}
+  .apres-devis h4{font-size:1rem; margin:0 0 14px;}
+  .apres-devis ol{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px;}
+  .apres-devis li{display:flex; gap:12px; align-items:flex-start;}
+  .apres-devis .apres-num{flex-shrink:0; width:26px; height:26px; border-radius:50%; background:var(--cyan-500); color:#fff; font-size:.78rem; font-weight:700; display:flex; align-items:center; justify-content:center;}
+  .apres-devis .apres-txt b{display:block; font-size:.88rem; color:var(--navy-950);}
+  .apres-devis .apres-txt span{font-size:.82rem; color:var(--ink-soft);}
   .gamme-note{display:none; background:var(--steel-100); border:1px solid var(--steel-300); border-radius:12px; padding:10px 14px; font-size:.82rem; color:var(--ink-soft); margin:2px 0 14px;}
   .gamme-note.visible{display:block;}
   .config-swatch-grid{display:flex; flex-wrap:wrap; gap:12px;}
@@ -2631,6 +2658,16 @@
             <span>Réponse sous 48h ouvrées</span>
           </li>
         </ul>
+
+        <div class="apres-devis">
+          <h4>Que se passe-t-il après votre demande ?</h4>
+          <ol>
+            <li><span class="apres-num">1</span><span class="apres-txt"><b>Réception immédiate</b><span>Votre demande arrive directement chez notre équipe, à Carvin.</span></span></li>
+            <li><span class="apres-num">2</span><span class="apres-txt"><b>Un conseiller vous rappelle sous 48h ouvrées</b><span>Pour affiner vos besoins, dimensions et budget.</span></span></li>
+            <li><span class="apres-num">3</span><span class="apres-txt"><b>Métrage si nécessaire</b><span>Sur rendez-vous, pour les projets qui le demandent.</span></span></li>
+            <li><span class="apres-num">4</span><span class="apres-txt"><b>Devis détaillé, gratuit et sans engagement</b><span>Vous restez libre de comparer avant de décider.</span></span></li>
+          </ol>
+        </div>
       </div>
 
       <form class="devis-form" id="devisForm" name="devis" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
@@ -2772,6 +2809,16 @@
   </div>
 </footer>
 
+<div class="floating-cta" id="floatingCta">
+  <a class="fcta-btn fcta-whatsapp" id="fctaWhatsapp" href="https://wa.me/33677940260?text=Bonjour%2C%20je%20souhaite%20un%20renseignement%20sur%20vos%20produits%20Fermotek." target="_blank" rel="noopener" aria-label="Discuter avec Fermotek sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.3 2 11.6c0 1.9.55 3.7 1.6 5.3L2 22l5.3-1.5c1.5.8 3.2 1.3 4.7 1.3 5.5 0 10-4.3 10-9.6C22 6.3 17.5 2 12 2zm0 17.4c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.9.9-3-.2-.3C4.2 14.2 3.7 13 3.7 11.6c0-4.4 3.7-7.9 8.3-7.9s8.3 3.5 8.3 7.9-3.7 7.8-8.3 7.8zm4.5-5.9c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8.9-.2.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.3.1-.5.1-.1.2-.3.4-.4.1-.1.2-.2.2-.4.1-.2 0-.3 0-.4-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 4 3.5.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/></svg>
+  </a>
+  <a class="fcta-btn fcta-devis" href="#devis" id="fctaDevis">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+    <span>Obtenir mon devis</span>
+  </a>
+</div>
+
 <div id="lightboxModal" aria-hidden="true">
   <div id="lightboxClose" aria-label="Fermer">&times;</div>
   <figure>
@@ -2785,6 +2832,35 @@
   "use strict";
 
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ---------- Persistance de la progression des configurateurs (localStorage) ---------- */
+  function cfgSave(key, payload){
+    try{ localStorage.setItem('fermotek_cfg_'+key, JSON.stringify(payload)); }catch(e){}
+  }
+  function cfgLoad(key){
+    try{
+      var raw = localStorage.getItem('fermotek_cfg_'+key);
+      return raw ? JSON.parse(raw) : null;
+    }catch(e){ return null; }
+  }
+  function cfgClear(key){
+    try{ localStorage.removeItem('fermotek_cfg_'+key); }catch(e){}
+  }
+  function cfgHasProgress(state){
+    return Object.keys(state).some(function(k){
+      var v = state[k];
+      return v !== null && v !== undefined && v !== '';
+    });
+  }
+  function cfgShowResumeBanner(panelEl, onRestart){
+    if(!panelEl || panelEl.querySelector('.cfg-resume-banner')) return;
+    var b = document.createElement('div');
+    b.className = 'cfg-resume-banner';
+    b.innerHTML = '<span>↺ Configuration précédente restaurée.</span> <button type="button" class="cfg-resume-restart">Recommencer</button> <button type="button" class="cfg-resume-close" aria-label="Fermer">&times;</button>';
+    panelEl.insertBefore(b, panelEl.firstChild);
+    b.querySelector('.cfg-resume-restart').addEventListener('click', function(){ onRestart(); b.remove(); });
+    b.querySelector('.cfg-resume-close').addEventListener('click', function(){ b.remove(); });
+  }
 
   /* Mobile nav */
   var burger = document.getElementById('burgerBtn');
@@ -2803,6 +2879,27 @@
     });
   }, {threshold:.15});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  /* Floating CTA visibility */
+  (function(){
+    var fcta = document.getElementById('floatingCta');
+    var devisSection = document.getElementById('devis');
+    if(!fcta || !devisSection) return;
+    var pastHero = false;
+    var devisVisible = false;
+    function sync(){
+      fcta.classList.toggle('visible', pastHero && !devisVisible);
+    }
+    window.addEventListener('scroll', function(){
+      pastHero = window.scrollY > 500;
+      sync();
+    }, {passive:true});
+    var devisIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ devisVisible = e.isIntersecting; });
+      sync();
+    }, {threshold:.1});
+    devisIo.observe(devisSection);
+  })();
 
   /* Tabs */
   var tabbtns = document.querySelectorAll('.tabbtn');
@@ -2907,11 +3004,22 @@
     var currentStep = 1;
     var totalSteps = 6;
 
+    var panel = document.getElementById('panel-garage');
     var stepEls = document.querySelectorAll('#panel-garage .config-step');
     var dotEls = document.querySelectorAll('#panel-garage .step-dot');
     var prevBtn = document.getElementById('configPrev');
     var nextBtn = document.getElementById('configNext');
     var sendBtn = document.getElementById('configSend');
+    var GKEY = 'garage';
+    var groupBindings = [
+      ['opt-ouverture','ouverture'],
+      ['opt-panneau','panneau'],
+      ['opt-coloris','coloris'],
+      ['opt-hublots','hublots'],
+      ['opt-decor','decor'],
+      ['opt-portillon','portillon'],
+      ['opt-motorisation','motorisation']
+    ];
 
     function selectCard(container, value, cardsSelector){
       container.querySelectorAll(cardsSelector).forEach(function(c){
@@ -2927,16 +3035,17 @@
         if(!card) return;
         state[stateKey] = card.dataset.value;
         selectCard(container, card.dataset.value, '.config-card, .config-swatch');
+        cfgSave(GKEY, {state:state, step:currentStep});
       });
     }
 
-    bindCardGroup('opt-ouverture', 'ouverture');
-    bindCardGroup('opt-panneau', 'panneau');
-    bindCardGroup('opt-coloris', 'coloris');
-    bindCardGroup('opt-hublots', 'hublots');
-    bindCardGroup('opt-decor', 'decor');
-    bindCardGroup('opt-portillon', 'portillon');
-    bindCardGroup('opt-motorisation', 'motorisation');
+    groupBindings.forEach(function(gb){ bindCardGroup(gb[0], gb[1]); });
+    function applyAllSelections(){
+      groupBindings.forEach(function(gb){
+        var c = document.getElementById(gb[0]);
+        if(c) selectCard(c, state[gb[1]], '.config-card, .config-swatch');
+      });
+    }
 
     function renderModelStep(){
       var container = document.getElementById('opt-modele');
@@ -2961,6 +3070,7 @@
       sendBtn.style.display = n === totalSteps ? 'inline-flex' : 'none';
       if(n === 2){ renderModelStep(); }
       if(n === 6){ renderRecap(); }
+      cfgSave(GKEY, {state:state, step:currentStep});
     }
 
     function canAdvance(n){
@@ -2974,6 +3084,7 @@
       if(currentStep === 3){
         state.largeur = document.getElementById('cfg-largeur').value.trim();
         state.hauteur = document.getElementById('cfg-hauteur').value.trim();
+        cfgSave(GKEY, {state:state, step:currentStep});
       }
       if(!canAdvance(currentStep)) return;
       if(currentStep < totalSteps){ currentStep++; showStep(currentStep); window.scrollTo({top: document.getElementById('configurateur').offsetTop - 90, behavior:'smooth'}); }
@@ -3201,9 +3312,33 @@
 
       document.getElementById('devis').scrollIntoView({behavior:'smooth', block:'start'});
       setTimeout(function(){ document.getElementById('f-prenom').focus(); }, 500);
+      cfgClear(GKEY);
     });
 
-    showStep(1);
+    (function(){
+      var saved = cfgLoad(GKEY);
+      if(saved && saved.state && cfgHasProgress(saved.state)){
+        Object.assign(state, saved.state);
+        if(state.largeur) document.getElementById('cfg-largeur').value = state.largeur;
+        if(state.hauteur) document.getElementById('cfg-hauteur').value = state.hauteur;
+        renderModelStep();
+        applyAllSelections();
+        currentStep = saved.step || 1;
+        showStep(currentStep);
+        cfgShowResumeBanner(panel, function(){
+          cfgClear(GKEY);
+          state = { ouverture:null, modele:null, largeur:'', hauteur:'', panneau:null, coloris:null, hublots:null, decor:null, portillon:null, motorisation:null };
+          document.getElementById('cfg-largeur').value = '';
+          document.getElementById('cfg-hauteur').value = '';
+          renderModelStep();
+          applyAllSelections();
+          currentStep = 1;
+          showStep(1);
+        });
+      } else {
+        showStep(1);
+      }
+    })();
   })();
 
   /* ---------- Product tabs (switch between configurators) ---------- */
@@ -3339,6 +3474,15 @@
     var prevBtn = document.getElementById('portailPrev');
     var nextBtn = document.getElementById('portailNext');
     var sendBtn = document.getElementById('portailSend');
+    var PKEY = 'portail';
+    var groupBindings = [
+      ['portail-opt-ouverture','ouverture'],
+      ['portail-opt-gamme','gamme'],
+      ['portail-opt-coloris','coloris'],
+      ['portail-opt-motorisation','motorisation'],
+      ['portail-opt-portillon','portillon'],
+      ['portail-opt-decor','decor']
+    ];
 
     function selectCard(container, value){
       container.querySelectorAll('.config-card, .config-swatch').forEach(function(c){
@@ -3353,14 +3497,16 @@
         if(!card) return;
         state[key] = card.dataset.value;
         selectCard(c, card.dataset.value);
+        cfgSave(PKEY, {state:state, step:currentStep});
       });
     }
-    bindGroup('portail-opt-ouverture','ouverture');
-    bindGroup('portail-opt-gamme','gamme');
-    bindGroup('portail-opt-coloris','coloris');
-    bindGroup('portail-opt-motorisation','motorisation');
-    bindGroup('portail-opt-portillon','portillon');
-    bindGroup('portail-opt-decor','decor');
+    groupBindings.forEach(function(gb){ bindGroup(gb[0], gb[1]); });
+    function applyAllSelections(){
+      groupBindings.forEach(function(gb){
+        var c = document.getElementById(gb[0]);
+        if(c) selectCard(c, state[gb[1]]);
+      });
+    }
 
     var gammeNotes = {
       "Village": "Gamme <b>Village</b> — construction contemporaine <b>assemblée et vissée</b> (tenon-mortaise), très large choix de designs, du classique ajouré aux lames Z ou brise-vue.",
@@ -3401,6 +3547,7 @@
         state.modeleKeyword = card.dataset.kw || '';
         state.modelePhoto = card.dataset.photo || '';
         selectCard(c, card.dataset.value);
+        cfgSave(PKEY, {state:state, step:currentStep});
       });
     })();
 
@@ -3416,6 +3563,7 @@
       sendBtn.style.display = n === totalSteps ? 'inline-flex' : 'none';
       if(n === 3){ renderModelStep(); }
       if(n === totalSteps){ renderRecap(); }
+      cfgSave(PKEY, {state:state, step:currentStep});
     }
     function canAdvance(n){
       if(n === 1 && !state.ouverture){ alert('Merci de choisir un type d\'ouverture pour continuer.'); return false; }
@@ -3428,6 +3576,7 @@
       if(currentStep === 4){
         state.largeur = document.getElementById('portail-largeur').value.trim();
         state.hauteur = document.getElementById('portail-hauteur').value.trim();
+        cfgSave(PKEY, {state:state, step:currentStep});
       }
       if(!canAdvance(currentStep)) return;
       if(currentStep < totalSteps){ currentStep++; showStep(currentStep); window.scrollTo({top: document.getElementById('configurateur').offsetTop - 90, behavior:'smooth'}); }
@@ -3482,9 +3631,33 @@
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
       document.getElementById('devis').scrollIntoView({behavior:'smooth', block:'start'});
       setTimeout(function(){ document.getElementById('f-prenom').focus(); }, 500);
+      cfgClear(PKEY);
     });
 
-    showStep(1);
+    (function(){
+      var saved = cfgLoad(PKEY);
+      if(saved && saved.state && cfgHasProgress(saved.state)){
+        Object.assign(state, saved.state);
+        if(state.largeur) document.getElementById('portail-largeur').value = state.largeur;
+        if(state.hauteur) document.getElementById('portail-hauteur').value = state.hauteur;
+        renderModelStep();
+        applyAllSelections();
+        currentStep = saved.step || 1;
+        showStep(currentStep);
+        cfgShowResumeBanner(panel, function(){
+          cfgClear(PKEY);
+          state = { ouverture:null, gamme:null, modele:null, modeleKeyword:'', modelePhoto:'', largeur:'', hauteur:'', coloris:null, motorisation:null, portillon:null, decor:null };
+          document.getElementById('portail-largeur').value = '';
+          document.getElementById('portail-hauteur').value = '';
+          renderModelStep();
+          applyAllSelections();
+          currentStep = 1;
+          showStep(1);
+        });
+      } else {
+        showStep(1);
+      }
+    })();
   })();
 
   /* ---------- Configurateur Clôture ---------- */
@@ -3497,6 +3670,14 @@
     var prevBtn = document.getElementById('cloturePrev');
     var nextBtn = document.getElementById('clotureNext');
     var sendBtn = document.getElementById('clotureSend');
+    var CKEY = 'cloture';
+    var groupBindings = [
+      ['cloture-opt-orientation','orientation'],
+      ['cloture-opt-finition','finition'],
+      ['cloture-opt-coloris','coloris'],
+      ['cloture-opt-portillon','portillon'],
+      ['cloture-opt-motif','motif']
+    ];
 
     function selectCard(container, value){
       container.querySelectorAll('.config-card, .config-swatch').forEach(function(c){
@@ -3511,13 +3692,16 @@
         if(!card) return;
         state[key] = card.dataset.value;
         selectCard(c, card.dataset.value);
+        cfgSave(CKEY, {state:state, step:currentStep});
       });
     }
-    bindGroup('cloture-opt-orientation','orientation');
-    bindGroup('cloture-opt-finition','finition');
-    bindGroup('cloture-opt-coloris','coloris');
-    bindGroup('cloture-opt-portillon','portillon');
-    bindGroup('cloture-opt-motif','motif');
+    groupBindings.forEach(function(gb){ bindGroup(gb[0], gb[1]); });
+    function applyAllSelections(){
+      groupBindings.forEach(function(gb){
+        var c = document.getElementById(gb[0]);
+        if(c) selectCard(c, state[gb[1]]);
+      });
+    }
 
     function showStep(n){
       stepEls.forEach(function(s){ s.classList.toggle('active', parseInt(s.dataset.step,10) === n); });
@@ -3530,6 +3714,7 @@
       nextBtn.style.display = n === totalSteps ? 'none' : 'inline-flex';
       sendBtn.style.display = n === totalSteps ? 'inline-flex' : 'none';
       if(n === totalSteps){ renderRecap(); }
+      cfgSave(CKEY, {state:state, step:currentStep});
     }
     function canAdvance(n){
       if(n === 1 && !state.orientation){ alert('Merci de choisir une orientation pour continuer.'); return false; }
@@ -3541,6 +3726,7 @@
       if(currentStep === 3){
         state.longueur = document.getElementById('cloture-longueur').value.trim();
         state.hauteur = document.getElementById('cloture-hauteur').value.trim();
+        cfgSave(CKEY, {state:state, step:currentStep});
       }
       if(!canAdvance(currentStep)) return;
       if(currentStep < totalSteps){ currentStep++; showStep(currentStep); window.scrollTo({top: document.getElementById('configurateur').offsetTop - 90, behavior:'smooth'}); }
@@ -3589,9 +3775,31 @@
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
       document.getElementById('devis').scrollIntoView({behavior:'smooth', block:'start'});
       setTimeout(function(){ document.getElementById('f-prenom').focus(); }, 500);
+      cfgClear(CKEY);
     });
 
-    showStep(1);
+    (function(){
+      var saved = cfgLoad(CKEY);
+      if(saved && saved.state && cfgHasProgress(saved.state)){
+        Object.assign(state, saved.state);
+        if(state.longueur) document.getElementById('cloture-longueur').value = state.longueur;
+        if(state.hauteur) document.getElementById('cloture-hauteur').value = state.hauteur;
+        applyAllSelections();
+        currentStep = saved.step || 1;
+        showStep(currentStep);
+        cfgShowResumeBanner(panel, function(){
+          cfgClear(CKEY);
+          state = { orientation:null, finition:null, longueur:'', hauteur:'', coloris:null, portillon:null, motif:null };
+          document.getElementById('cloture-longueur').value = '';
+          document.getElementById('cloture-hauteur').value = '';
+          applyAllSelections();
+          currentStep = 1;
+          showStep(1);
+        });
+      } else {
+        showStep(1);
+      }
+    })();
   })();
 
   /* ---------- Configurateur Garde-corps ---------- */
@@ -3604,6 +3812,13 @@
     var prevBtn = document.getElementById('gardecorpsPrev');
     var nextBtn = document.getElementById('gardecorpsNext');
     var sendBtn = document.getElementById('gardecorpsSend');
+    var GCKEY = 'gardecorps';
+    var groupBindings = [
+      ['gardecorps-opt-config','config'],
+      ['gardecorps-opt-remplissage','remplissage'],
+      ['gardecorps-opt-coloris','coloris'],
+      ['gardecorps-opt-maincourante','maincourante']
+    ];
 
     function selectCard(container, value){
       container.querySelectorAll('.config-card, .config-swatch').forEach(function(c){
@@ -3618,12 +3833,16 @@
         if(!card) return;
         state[key] = card.dataset.value;
         selectCard(c, card.dataset.value);
+        cfgSave(GCKEY, {state:state, step:currentStep});
       });
     }
-    bindGroup('gardecorps-opt-config','config');
-    bindGroup('gardecorps-opt-remplissage','remplissage');
-    bindGroup('gardecorps-opt-coloris','coloris');
-    bindGroup('gardecorps-opt-maincourante','maincourante');
+    groupBindings.forEach(function(gb){ bindGroup(gb[0], gb[1]); });
+    function applyAllSelections(){
+      groupBindings.forEach(function(gb){
+        var c = document.getElementById(gb[0]);
+        if(c) selectCard(c, state[gb[1]]);
+      });
+    }
 
     function showStep(n){
       stepEls.forEach(function(s){ s.classList.toggle('active', parseInt(s.dataset.step,10) === n); });
@@ -3636,6 +3855,7 @@
       nextBtn.style.display = n === totalSteps ? 'none' : 'inline-flex';
       sendBtn.style.display = n === totalSteps ? 'inline-flex' : 'none';
       if(n === totalSteps){ renderRecap(); }
+      cfgSave(GCKEY, {state:state, step:currentStep});
     }
     function canAdvance(n){
       if(n === 1 && !state.config){ alert('Merci de choisir une configuration pour continuer.'); return false; }
@@ -3647,6 +3867,7 @@
       if(currentStep === 3){
         state.longueur = document.getElementById('gardecorps-longueur').value.trim();
         state.hauteur = document.getElementById('gardecorps-hauteur').value.trim();
+        cfgSave(GCKEY, {state:state, step:currentStep});
       }
       if(!canAdvance(currentStep)) return;
       if(currentStep < totalSteps){ currentStep++; showStep(currentStep); window.scrollTo({top: document.getElementById('configurateur').offsetTop - 90, behavior:'smooth'}); }
@@ -3693,9 +3914,31 @@
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
       document.getElementById('devis').scrollIntoView({behavior:'smooth', block:'start'});
       setTimeout(function(){ document.getElementById('f-prenom').focus(); }, 500);
+      cfgClear(GCKEY);
     });
 
-    showStep(1);
+    (function(){
+      var saved = cfgLoad(GCKEY);
+      if(saved && saved.state && cfgHasProgress(saved.state)){
+        Object.assign(state, saved.state);
+        if(state.longueur) document.getElementById('gardecorps-longueur').value = state.longueur;
+        if(state.hauteur) document.getElementById('gardecorps-hauteur').value = state.hauteur;
+        applyAllSelections();
+        currentStep = saved.step || 1;
+        showStep(currentStep);
+        cfgShowResumeBanner(panel, function(){
+          cfgClear(GCKEY);
+          state = { config:null, remplissage:null, longueur:'', hauteur:'', coloris:null, maincourante:null };
+          document.getElementById('gardecorps-longueur').value = '';
+          document.getElementById('gardecorps-hauteur').value = '';
+          applyAllSelections();
+          currentStep = 1;
+          showStep(1);
+        });
+      } else {
+        showStep(1);
+      }
+    })();
   })();
 
   /* ---------- Configurateur Rideau métallique ---------- */
@@ -3708,6 +3951,14 @@
     var prevBtn = document.getElementById('rideauPrev');
     var nextBtn = document.getElementById('rideauNext');
     var sendBtn = document.getElementById('rideauSend');
+    var RKEY = 'rideau';
+    var groupBindings = [
+      ['rideau-opt-usage','usage'],
+      ['rideau-opt-lames','lames'],
+      ['rideau-opt-coloris','coloris'],
+      ['rideau-opt-manoeuvre','manoeuvre'],
+      ['rideau-opt-telecommande','telecommande']
+    ];
 
     function selectCard(container, value){
       container.querySelectorAll('.config-card, .config-swatch').forEach(function(c){
@@ -3722,13 +3973,16 @@
         if(!card) return;
         state[key] = card.dataset.value;
         selectCard(c, card.dataset.value);
+        cfgSave(RKEY, {state:state, step:currentStep});
       });
     }
-    bindGroup('rideau-opt-usage','usage');
-    bindGroup('rideau-opt-lames','lames');
-    bindGroup('rideau-opt-coloris','coloris');
-    bindGroup('rideau-opt-manoeuvre','manoeuvre');
-    bindGroup('rideau-opt-telecommande','telecommande');
+    groupBindings.forEach(function(gb){ bindGroup(gb[0], gb[1]); });
+    function applyAllSelections(){
+      groupBindings.forEach(function(gb){
+        var c = document.getElementById(gb[0]);
+        if(c) selectCard(c, state[gb[1]]);
+      });
+    }
 
     function showStep(n){
       stepEls.forEach(function(s){ s.classList.toggle('active', parseInt(s.dataset.step,10) === n); });
@@ -3741,6 +3995,7 @@
       nextBtn.style.display = n === totalSteps ? 'none' : 'inline-flex';
       sendBtn.style.display = n === totalSteps ? 'inline-flex' : 'none';
       if(n === totalSteps){ renderRecap(); }
+      cfgSave(RKEY, {state:state, step:currentStep});
     }
     function canAdvance(n){
       if(n === 1 && !state.usage){ alert('Merci de choisir un usage pour continuer.'); return false; }
@@ -3752,6 +4007,7 @@
       if(currentStep === 3){
         state.largeur = document.getElementById('rideau-largeur').value.trim();
         state.hauteur = document.getElementById('rideau-hauteur').value.trim();
+        cfgSave(RKEY, {state:state, step:currentStep});
       }
       if(!canAdvance(currentStep)) return;
       if(currentStep < totalSteps){ currentStep++; showStep(currentStep); window.scrollTo({top: document.getElementById('configurateur').offsetTop - 90, behavior:'smooth'}); }
@@ -3802,9 +4058,31 @@
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
       document.getElementById('devis').scrollIntoView({behavior:'smooth', block:'start'});
       setTimeout(function(){ document.getElementById('f-prenom').focus(); }, 500);
+      cfgClear(RKEY);
     });
 
-    showStep(1);
+    (function(){
+      var saved = cfgLoad(RKEY);
+      if(saved && saved.state && cfgHasProgress(saved.state)){
+        Object.assign(state, saved.state);
+        if(state.largeur) document.getElementById('rideau-largeur').value = state.largeur;
+        if(state.hauteur) document.getElementById('rideau-hauteur').value = state.hauteur;
+        applyAllSelections();
+        currentStep = saved.step || 1;
+        showStep(currentStep);
+        cfgShowResumeBanner(panel, function(){
+          cfgClear(RKEY);
+          state = { usage:null, lames:null, largeur:'', hauteur:'', coloris:null, manoeuvre:null, telecommande:null };
+          document.getElementById('rideau-largeur').value = '';
+          document.getElementById('rideau-hauteur').value = '';
+          applyAllSelections();
+          currentStep = 1;
+          showStep(1);
+        });
+      } else {
+        showStep(1);
+      }
+    })();
   })();
 
   /* ---------- Configurateur Aménagement extérieur ---------- */
@@ -3833,6 +4111,14 @@
     var prevBtn = document.getElementById('amenagementPrev');
     var nextBtn = document.getElementById('amenagementNext');
     var sendBtn = document.getElementById('amenagementSend');
+    var AKEY = 'amenagement';
+    var groupBindings = [
+      ['amenagement-opt-produit','produit'],
+      ['amenagement-opt-coloris','coloris'],
+      ['amenagement-opt-motorisation','motorisation'],
+      ['amenagement-opt-eclairage','eclairage'],
+      ['amenagement-opt-protection','protection']
+    ];
 
     function selectCard(container, value){
       container.querySelectorAll('.config-card, .config-swatch').forEach(function(c){
@@ -3847,13 +4133,16 @@
         if(!card) return;
         state[key] = card.dataset.value;
         selectCard(c, card.dataset.value);
+        cfgSave(AKEY, {state:state, step:currentStep});
       });
     }
-    bindGroup('amenagement-opt-produit','produit');
-    bindGroup('amenagement-opt-coloris','coloris');
-    bindGroup('amenagement-opt-motorisation','motorisation');
-    bindGroup('amenagement-opt-eclairage','eclairage');
-    bindGroup('amenagement-opt-protection','protection');
+    groupBindings.forEach(function(gb){ bindGroup(gb[0], gb[1]); });
+    function applyAllSelections(){
+      groupBindings.forEach(function(gb){
+        var c = document.getElementById(gb[0]);
+        if(c) selectCard(c, state[gb[1]]);
+      });
+    }
 
     function renderModelStep(){
       var container = document.getElementById('amenagement-opt-modele');
@@ -3878,6 +4167,7 @@
       sendBtn.style.display = n === totalSteps ? 'inline-flex' : 'none';
       if(n === 2){ renderModelStep(); }
       if(n === totalSteps){ renderRecap(); }
+      cfgSave(AKEY, {state:state, step:currentStep});
     }
     function canAdvance(n){
       if(n === 1 && !state.produit){ alert('Merci de choisir un produit pour continuer.'); return false; }
@@ -3889,6 +4179,7 @@
       if(currentStep === 3){
         state.largeur = document.getElementById('amenagement-largeur').value.trim();
         state.profondeur = document.getElementById('amenagement-profondeur').value.trim();
+        cfgSave(AKEY, {state:state, step:currentStep});
       }
       if(!canAdvance(currentStep)) return;
       if(currentStep < totalSteps){ currentStep++; showStep(currentStep); window.scrollTo({top: document.getElementById('configurateur').offsetTop - 90, behavior:'smooth'}); }
@@ -3939,9 +4230,33 @@
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
       document.getElementById('devis').scrollIntoView({behavior:'smooth', block:'start'});
       setTimeout(function(){ document.getElementById('f-prenom').focus(); }, 500);
+      cfgClear(AKEY);
     });
 
-    showStep(1);
+    (function(){
+      var saved = cfgLoad(AKEY);
+      if(saved && saved.state && cfgHasProgress(saved.state)){
+        Object.assign(state, saved.state);
+        if(state.largeur) document.getElementById('amenagement-largeur').value = state.largeur;
+        if(state.profondeur) document.getElementById('amenagement-profondeur').value = state.profondeur;
+        renderModelStep();
+        applyAllSelections();
+        currentStep = saved.step || 1;
+        showStep(currentStep);
+        cfgShowResumeBanner(panel, function(){
+          cfgClear(AKEY);
+          state = { produit:null, modele:null, largeur:'', profondeur:'', coloris:null, motorisation:null, eclairage:null, protection:null };
+          document.getElementById('amenagement-largeur').value = '';
+          document.getElementById('amenagement-profondeur').value = '';
+          renderModelStep();
+          applyAllSelections();
+          currentStep = 1;
+          showStep(1);
+        });
+      } else {
+        showStep(1);
+      }
+    })();
   })();
 
   /* ---------- Devis storage ---------- */
