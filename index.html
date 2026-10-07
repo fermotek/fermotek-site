@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://fermotek.net/">
 <meta name="msvalidate.01" content="EA20DFF5CCE0D079E08FC8D6CC913942" />
 <meta name="google-site-verification" content="D106mqWnwGjTmHDW4XsqbpYiLIMamQnfh4mugGMbXIU" />
-<link rel="icon" href="images/favicon/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="48x48" href="images/favicon/favicon-48x48.png">
@@ -33,7 +33,9 @@
 <meta name="theme-color" content="#0A2436">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&family=Inter:wght@400..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&family=Inter:wght@400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400..700&family=Inter:wght@400..800&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <style>
   :root{
     --navy-950:#0A2436;
@@ -90,6 +92,7 @@
   p{margin:0;line-height:1.6;}
   a{color:inherit;text-decoration:none;}
   img,svg{display:block;max-width:100%;}
+  img{height:auto;}
   button{font-family:inherit;cursor:pointer;}
   .mono{font-family:'IBM Plex Mono',monospace; letter-spacing:.02em;}
   .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
@@ -918,7 +921,7 @@
 <header>
   <div class="wrap nav">
     <a href="#accueil" class="brand">
-      <img loading="eager" src="images/site/logo-fermotek.png" alt="Fermotek — Portails et portes de garage" class="brand-logo">
+      <img width="500" height="96" loading="eager" src="images/site/logo-fermotek.png" alt="Fermotek — Portails et portes de garage" class="brand-logo">
     </a>
     <nav class="links">
       <a href="#configurateur">Configurateur</a>
@@ -1012,12 +1015,12 @@
       <div class="badge-float bottom">🛡 Garantie 10 ans</div>
       <div class="door-opening">
         <div class="hero-slides" id="heroSlides">
-          <img class="slide active" src="images/realisations/thumbs/porte-garage-04.jpg" data-label="Porte de garage · pose chez un client Fermotek" alt="Porte de garage sectionnelle blanche installée par Fermotek" loading="eager">
-          <img class="slide" src="images/realisations/thumbs/porte-garage-09.jpg" data-label="Porte de garage · finition anthracite" alt="Porte de garage sectionnelle anthracite installée par Fermotek" loading="lazy">
-          <img class="slide" src="images/realisations/thumbs/portail-01.jpg" data-label="Portails aluminium sur mesure" alt="Portail aluminium anthracite installé par Fermotek" loading="lazy">
-          <img class="slide" src="images/realisations/thumbs/portail-06.jpg" data-label="Portails · large choix de styles" alt="Portail aluminium sur mesure installé par Fermotek" loading="lazy">
-          <img class="slide" src="images/realisations/thumbs/rideau-metallique-02.jpg" data-label="Rideaux métalliques" alt="Rideau métallique installé par Fermotek" loading="lazy">
-          <img class="slide" src="images/realisations/thumbs/portail-08.jpg" data-label="Clôtures assorties au portail" alt="Clôture et portail aluminium assortis, réalisation Fermotek" loading="lazy">
+          <img width="640" height="480" class="slide active" src="images/realisations/thumbs/porte-garage-04.jpg" data-label="Porte de garage · pose chez un client Fermotek" alt="Porte de garage sectionnelle blanche installée par Fermotek" loading="eager" fetchpriority="high">
+          <img width="640" height="480" class="slide" src="images/realisations/thumbs/porte-garage-09.jpg" data-label="Porte de garage · finition anthracite" alt="Porte de garage sectionnelle anthracite installée par Fermotek" loading="lazy">
+          <img width="640" height="480" class="slide" src="images/realisations/thumbs/portail-01.jpg" data-label="Portails aluminium sur mesure" alt="Portail aluminium anthracite installé par Fermotek" loading="lazy">
+          <img width="640" height="480" class="slide" src="images/realisations/thumbs/portail-06.jpg" data-label="Portails · large choix de styles" alt="Portail aluminium sur mesure installé par Fermotek" loading="lazy">
+          <img width="640" height="480" class="slide" src="images/realisations/thumbs/rideau-metallique-02.jpg" data-label="Rideaux métalliques" alt="Rideau métallique installé par Fermotek" loading="lazy">
+          <img width="640" height="480" class="slide" src="images/realisations/thumbs/portail-08.jpg" data-label="Clôtures assorties au portail" alt="Clôture et portail aluminium assortis, réalisation Fermotek" loading="lazy">
           <img loading="lazy" class="slide" data-ref="gardecorps" data-label="Garde-corps aluminium sur mesure" alt="Garde-corps aluminium sur mesure">
           <img loading="lazy" class="slide" data-ref="veranda" data-label="Vérandas &amp; jardins d'hiver" alt="Véranda et jardin d'hiver">
           <img loading="lazy" class="slide" data-ref="paroi" data-label="Parois &amp; baies coulissantes" alt="Paroi et baie coulissante">
@@ -1092,7 +1095,7 @@
       <div class="model-grid reveal">
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Plafond</span><img loading="lazy" src="images/site/porte-garage-alizee.jpg" alt="Porte de garage sectionnelle Alizée"></div>
+          <div class="model-visual"><span class="tag">Plafond</span><img width="640" height="901" loading="lazy" src="images/site/porte-garage-alizee.jpg" alt="Porte de garage sectionnelle Alizée"></div>
           <div class="model-body">
             <h3>Alizée <small>Lisse / Woodgrain</small></h3>
             <p>Notre modèle phare : finitions lisses, striées ou imitation bois, avec décors Aluminox en option.</p>
@@ -1108,7 +1111,7 @@
         </article>
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Plafond</span><img loading="lazy" src="images/site/porte-garage-mistral.jpg" alt="Porte de garage sectionnelle Mistral"></div>
+          <div class="model-visual"><span class="tag">Plafond</span><img width="640" height="381" loading="lazy" src="images/site/porte-garage-mistral.jpg" alt="Porte de garage sectionnelle Mistral"></div>
           <div class="model-body">
             <h3>Mistral <small>À cassettes</small></h3>
             <p>Le charme intemporel des panneaux à cassettes (PM1), pour un rendu classique et chaleureux.</p>
@@ -1124,7 +1127,7 @@
         </article>
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Plafond</span><img loading="lazy" src="images/site/porte-garage-tramontane.jpg" alt="Porte de garage sectionnelle Tramontane"></div>
+          <div class="model-visual"><span class="tag">Plafond</span><img width="625" height="541" loading="lazy" src="images/site/porte-garage-tramontane.jpg" alt="Porte de garage sectionnelle Tramontane"></div>
           <div class="model-body">
             <h3>Tramontane <small>Imitation bois</small></h3>
             <p>Panneau à cassettes imitation bois chêne doré, pour une façade au style traditionnel.</p>
@@ -1140,7 +1143,7 @@
         </article>
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Plafond</span><img loading="lazy" src="images/site/porte-garage-sirocco.jpg" alt="Porte de garage sectionnelle Sirocco"></div>
+          <div class="model-visual"><span class="tag">Plafond</span><img width="534" height="370" loading="lazy" src="images/site/porte-garage-sirocco.jpg" alt="Porte de garage sectionnelle Sirocco"></div>
           <div class="model-body">
             <h3>Sirocco <small>Rainuré imitation bois</small></h3>
             <p>Lisse ou rainuré imitation bois chêne doré — portillon intégré disponible pour un accès piéton fluide.</p>
@@ -1162,7 +1165,7 @@
       <div class="model-grid reveal">
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Latérale</span><img loading="lazy" src="images/site/porte-garage-laterale-artik.jpg" alt="Porte de garage sectionnelle latérale Artik"></div>
+          <div class="model-visual"><span class="tag">Latérale</span><img width="640" height="906" loading="lazy" src="images/site/porte-garage-laterale-artik.jpg" alt="Porte de garage sectionnelle latérale Artik"></div>
           <div class="model-body">
             <h3>Artik <small>Sur mesure</small></h3>
             <p>Précadre aluminium, galets tandem haute performance (charge admissible 80&nbsp;kg) et décors Aluminox sur mesure.</p>
@@ -1178,7 +1181,7 @@
         </article>
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Latérale</span><img loading="lazy" src="images/site/porte-garage-laterale-mediterranee.jpg" alt="Porte de garage sectionnelle latérale Méditerranée"></div>
+          <div class="model-visual"><span class="tag">Latérale</span><img width="640" height="321" loading="lazy" src="images/site/porte-garage-laterale-mediterranee.jpg" alt="Porte de garage sectionnelle latérale Méditerranée"></div>
           <div class="model-body">
             <h3>Méditerranée <small>À cassettes</small></h3>
             <p>Panneau à cassettes façon menuiserie traditionnelle, avec portillon intégré manuel ou motorisé.</p>
@@ -1194,7 +1197,7 @@
         </article>
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Latérale</span><img loading="lazy" src="images/site/porte-garage-laterale-redsea.jpg" alt="Porte de garage sectionnelle latérale Redsea"></div>
+          <div class="model-visual"><span class="tag">Latérale</span><img width="640" height="509" loading="lazy" src="images/site/porte-garage-laterale-redsea.jpg" alt="Porte de garage sectionnelle latérale Redsea"></div>
           <div class="model-body">
             <h3>Redsea <small>Imitation bois rainuré</small></h3>
             <p>Finition chêne foncé rainurée pour une allure chaleureuse, avec serrure et portillon intégré en option.</p>
@@ -1216,7 +1219,7 @@
       <div class="model-grid reveal">
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Battante · 2 vantaux</span><img loading="lazy" src="images/site/porte-garage-battante-galerne.jpg" alt="Porte de garage sectionnelle battante Galerne"></div>
+          <div class="model-visual"><span class="tag">Battante · 2 vantaux</span><img width="640" height="907" loading="lazy" src="images/site/porte-garage-battante-galerne.jpg" alt="Porte de garage sectionnelle battante Galerne"></div>
           <div class="model-body">
             <h3>Galerne <small>2 vantaux</small></h3>
             <p>Porte battante manuelle à deux vantaux, décors Aluminox sur mesure et poignée laquée assortie.</p>
@@ -1232,7 +1235,7 @@
         </article>
 
         <article class="model-card">
-          <div class="model-visual"><span class="tag">Battante · 3 vantaux</span><img loading="lazy" src="images/site/porte-garage-battante-bora.jpg" alt="Porte de garage sectionnelle battante Bora"></div>
+          <div class="model-visual"><span class="tag">Battante · 3 vantaux</span><img width="519" height="394" loading="lazy" src="images/site/porte-garage-battante-bora.jpg" alt="Porte de garage sectionnelle battante Bora"></div>
           <div class="model-body">
             <h3>Bora <small>3 vantaux</small></h3>
             <p>Configuration à trois vantaux pour les grandes largeurs, avec la même finition et le même choix de coloris.</p>
@@ -1263,7 +1266,7 @@
     <div class="model-grid reveal">
 
       <article class="model-card">
-        <div class="model-visual"><span class="tag">Industriel</span><img loading="lazy" src="images/site/porte-garage-industrielle-zephir.jpg" alt="Porte de garage industrielle Zéphir"></div>
+        <div class="model-visual"><span class="tag">Industriel</span><img width="640" height="688" loading="lazy" src="images/site/porte-garage-industrielle-zephir.jpg" alt="Porte de garage industrielle Zéphir"></div>
         <div class="model-body">
           <h3>Zéphir <small>Vitrée / pleine tôle</small></h3>
           <p>Disponible en 100% panneau ou avec grand vitrage acrylique double vitrage, transparent ou dépoli.</p>
@@ -1279,7 +1282,7 @@
       </article>
 
       <article class="model-card">
-        <div class="model-visual"><span class="tag">Industriel</span><img loading="lazy" src="images/site/porte-garage-industrielle-levante.jpg" alt="Porte de garage industrielle Levante"></div>
+        <div class="model-visual"><span class="tag">Industriel</span><img width="640" height="360" loading="lazy" src="images/site/porte-garage-industrielle-levante.jpg" alt="Porte de garage industrielle Levante"></div>
         <div class="model-body">
           <h3>Levante <small>Rainuré / micro-rainuré</small></h3>
           <p>Panneaux lisses ou rainurés, hublots rectangulaires et portillon intégré renforcé à seuil réduit.</p>
@@ -1566,7 +1569,7 @@
     <div class="style-grid reveal" id="styleGrid">
 
       <div class="style-card" data-tags="ajoure">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portail-ajoure-semi-ajoure-classique.jpg" alt="Portail ajouré et semi-ajouré Classique Fermotek" loading="lazy"><span class="flag">Le + économique</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portail-ajoure-semi-ajoure-classique.jpg" alt="Portail ajouré et semi-ajouré Classique Fermotek" loading="lazy"><span class="flag">Le + économique</span></div>
         <div class="style-body">
           <h4>Ajouré &amp; semi-ajouré Classique</h4>
           <p>100% ajouré, ajouré 2/3 ou 1/3 — 7 formes de traverses disponibles (droit, géométrique, bombé, CDG...).</p>
@@ -1576,7 +1579,7 @@
       </div>
 
       <div class="style-card" data-tags="ajoure design">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portail-semi-ajoure-design.jpg" alt="Portail semi-ajouré Design Fermotek" loading="lazy"><span class="flag">Le + contemporain</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portail-semi-ajoure-design.jpg" alt="Portail semi-ajouré Design Fermotek" loading="lazy"><span class="flag">Le + contemporain</span></div>
         <div class="style-body">
           <h4>Semi-ajouré Design</h4>
           <p>Configuration de lames au choix, entièrement personnalisable pour une esthétique unique et graphique.</p>
@@ -1586,7 +1589,7 @@
       </div>
 
       <div class="style-card" data-tags="plein">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portail-plein-classique.jpg" alt="Portail plein Classique Fermotek" loading="lazy"><span class="flag">Le + intemporel</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portail-plein-classique.jpg" alt="Portail plein Classique Fermotek" loading="lazy"><span class="flag">Le + intemporel</span></div>
         <div class="style-body">
           <h4>Plein Classique</h4>
           <p>Lames horizontales ou verticales, de 100 à 300mm, avec option réglettes Aluminox. Pour le même prix sur toute la gamme sur mesure.</p>
@@ -1596,7 +1599,7 @@
       </div>
 
       <div class="style-card" data-tags="ajoure design">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portail-semi-ajoure-decoupe-laser.jpg" alt="Portail semi-ajouré découpe laser Fermotek" loading="lazy"><span class="flag">Le + design</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portail-semi-ajoure-decoupe-laser.jpg" alt="Portail semi-ajouré découpe laser Fermotek" loading="lazy"><span class="flag">Le + design</span></div>
         <div class="style-body">
           <h4>Semi-ajouré découpe laser</h4>
           <p>Motifs standards (végétaux, graphiques...) ou entièrement sur mesure, découpés au laser dans le panneau.</p>
@@ -1606,7 +1609,7 @@
       </div>
 
       <div class="style-card" data-tags="plein design">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portail-decors-aluminox.jpg" alt="Portail plein décors Aluminox Fermotek" loading="lazy"><span class="flag">Le + design</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portail-decors-aluminox.jpg" alt="Portail plein décors Aluminox Fermotek" loading="lazy"><span class="flag">Le + design</span></div>
         <div class="style-body">
           <h4>Plein — décors Aluminox</h4>
           <p>Tôle Aluminox brossée en décor standard ou sur mesure, et option numéro de maison en découpe laser.</p>
@@ -1616,7 +1619,7 @@
       </div>
 
       <div class="style-card" data-tags="plein">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portail-lames-persiennees.jpg" alt="Portail à lames persiennées Fermotek" loading="lazy"><span class="flag">Anti-vis-à-vis</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portail-lames-persiennees.jpg" alt="Portail à lames persiennées Fermotek" loading="lazy"><span class="flag">Anti-vis-à-vis</span></div>
         <div class="style-body">
           <h4>Modèle lame persiennée</h4>
           <p>Lame brise-vue ou lame persiennée « Z » : discrétion maximale et prise au vent réduite.</p>
@@ -1626,7 +1629,7 @@
       </div>
 
       <div class="style-card" data-tags="plein nouveaute">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portail-imitation-bois.jpg" alt="Portail imitation bois Fermotek" loading="lazy"><span class="flag">Nouveauté</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portail-imitation-bois.jpg" alt="Portail imitation bois Fermotek" loading="lazy"><span class="flag">Nouveauté</span></div>
         <div class="style-body">
           <h4>Modèle imitation bois</h4>
           <p>5 teintes bois (ivoire, naturel, chêne doré, chêne foncé, noir cendré), en plein ou en ajouré.</p>
@@ -1636,7 +1639,7 @@
       </div>
 
       <div class="style-card" data-tags="design">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portails-specifiques.jpg" alt="Portails spécifiques Fermotek : coulissant vis-à-vis, télescopique, sectionnel" loading="lazy"><span class="flag">Projets complexes</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portails-specifiques.jpg" alt="Portails spécifiques Fermotek : coulissant vis-à-vis, télescopique, sectionnel" loading="lazy"><span class="flag">Projets complexes</span></div>
         <div class="style-body">
           <h4>Modèles spécifiques</h4>
           <p>Coulissant vis-à-vis, télescopique 2 ou 3 vantaux, sectionnel, portillon intégré, grandes dimensions, battant 90°.</p>
@@ -1646,7 +1649,7 @@
       </div>
 
       <div class="style-card" data-tags="traditionnel">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/portail-traditionnel-city.jpg" alt="Portail traditionnel City Fermotek, aspect fer forgé" loading="lazy"><span class="flag">Anti-corrosion</span></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/portail-traditionnel-city.jpg" alt="Portail traditionnel City Fermotek, aspect fer forgé" loading="lazy"><span class="flag">Anti-corrosion</span></div>
         <div class="style-body">
           <h4>Modèle traditionnel — City</h4>
           <p>Design type acier (barreaudage, cache-vue festonné, portes cochères) avec la durabilité de l'aluminium soudé.</p>
@@ -1661,7 +1664,7 @@
     <h3 id="cloture-gardecorps" style="font-size:1.3rem; margin:46px 0 16px; scroll-margin-top:150px;">Assortis à votre portail : clôture &amp; garde-corps</h3>
     <div class="feature-split reveal">
       <div class="feature-panel">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/cloture-aluminium-assortie.jpg" alt="Clôture aluminium Fermotek assortie au portail" loading="lazy"></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/cloture-aluminium-assortie.jpg" alt="Clôture aluminium Fermotek assortie au portail" loading="lazy"></div>
         <div class="style-body">
           <h4>La clôture aluminium</h4>
           <p>Pleine, ajourée ou persiennée, en lames horizontales ou verticales, personnalisable et assortie à la couleur de votre portail — 7 configurations horizontales + 2 verticales.</p>
@@ -1669,7 +1672,7 @@
         </div>
       </div>
       <div class="feature-panel">
-        <div class="style-visual"><img class="lightbox-trigger" src="images/site/garde-corps-aluminium.jpg" alt="Garde-corps aluminium sur mesure Fermotek" loading="lazy"></div>
+        <div class="style-visual"><img width="640" height="905" class="lightbox-trigger" src="images/site/garde-corps-aluminium.jpg" alt="Garde-corps aluminium sur mesure Fermotek" loading="lazy"></div>
         <div class="style-body">
           <h4>Le garde-corps sur mesure</h4>
           <p>Configuration sur dalle ou nez de dalle, main courante ronde ou rectangulaire, remplissage vitré, tôlé, micro-perforé, barreaudé ou en découpe laser. Conforme aux normes 2024.</p>
@@ -1767,7 +1770,7 @@
     </div>
     <div class="alu-grid reveal">
       <div class="alu-card">
-        <div class="alu-visual"><img loading="lazy" class="lightbox-trigger" src="images/site/alu-verandas-jardins-hiver.jpg" alt="Vérandas &amp; jardins d'hiver"></div>
+        <div class="alu-visual"><img width="640" height="460" loading="lazy" class="lightbox-trigger" src="images/site/alu-verandas-jardins-hiver.jpg" alt="Vérandas &amp; jardins d'hiver"></div>
         <div class="alu-body">
           <h4 id="alu-veranda">Vérandas &amp; jardins d'hiver</h4>
           <p>Extension lumineuse et sur mesure de la maison, disponible en plusieurs styles de toiture et coloris RAL, pour un espace de vie supplémentaire toute l'année.</p>
@@ -1775,7 +1778,7 @@
         </div>
       </div>
       <div class="alu-card">
-        <div class="alu-visual"><img loading="lazy" class="lightbox-trigger" src="images/site/alu-pergolas-bioclimatiques.jpg" alt="Pergolas bioclimatiques"></div>
+        <div class="alu-visual"><img width="640" height="460" loading="lazy" class="lightbox-trigger" src="images/site/alu-pergolas-bioclimatiques.jpg" alt="Pergolas bioclimatiques"></div>
         <div class="alu-body">
           <h4 id="alu-pergola">Pergolas bioclimatiques</h4>
           <p>Toit à lames orientables piloté par télécommande, pour moduler lumière, ombre et ventilation selon la météo et les saisons.</p>
@@ -1783,7 +1786,7 @@
         </div>
       </div>
       <div class="alu-card">
-        <div class="alu-visual"><img loading="lazy" class="lightbox-trigger" src="images/site/alu-carports.jpg" alt="Carports"></div>
+        <div class="alu-visual"><img width="640" height="460" loading="lazy" class="lightbox-trigger" src="images/site/alu-carports.jpg" alt="Carports"></div>
         <div class="alu-body">
           <h4 id="alu-carport">Carports</h4>
           <p>Abri voiture autoportant ou adossé à toiture acier anti-condensation, disponible en version extra-large pour plusieurs véhicules.</p>
@@ -1791,7 +1794,7 @@
         </div>
       </div>
       <div class="alu-card">
-        <div class="alu-visual"><img loading="lazy" class="lightbox-trigger" src="images/site/alu-parois-baies-coulissantes.jpg" alt="Parois &amp; baies coulissantes"></div>
+        <div class="alu-visual"><img width="640" height="460" loading="lazy" class="lightbox-trigger" src="images/site/alu-parois-baies-coulissantes.jpg" alt="Parois &amp; baies coulissantes"></div>
         <div class="alu-body">
           <h4 id="alu-parois">Parois &amp; baies coulissantes</h4>
           <p>Panneaux vitrés coulissants sur 2 à 6 rails pour fermer une véranda ou une terrasse tout en conservant vue et luminosité.</p>
@@ -1799,7 +1802,7 @@
         </div>
       </div>
       <div class="alu-card">
-        <div class="alu-visual"><img loading="lazy" class="lightbox-trigger" src="images/site/alu-protections-solaires-screens.jpg" alt="Protections solaires &amp; screens"></div>
+        <div class="alu-visual"><img width="640" height="460" loading="lazy" class="lightbox-trigger" src="images/site/alu-protections-solaires-screens.jpg" alt="Protections solaires &amp; screens"></div>
         <div class="alu-body">
           <h4 id="alu-protections">Protections solaires &amp; screens</h4>
           <p>Stores et screens motorisés en toile technique résistante, pour maîtriser chaleur et luminosité en toute saison.</p>
@@ -1807,7 +1810,7 @@
         </div>
       </div>
       <div class="alu-card">
-        <div class="alu-visual"><img loading="lazy" class="lightbox-trigger" src="images/site/alu-parois-fixes.jpg" alt="Systèmes de parois fixes"></div>
+        <div class="alu-visual"><img width="640" height="460" loading="lazy" class="lightbox-trigger" src="images/site/alu-parois-fixes.jpg" alt="Systèmes de parois fixes"></div>
         <div class="alu-body">
           <h4 id="alu-parois-fixes">Systèmes de parois fixes</h4>
           <p>Murs fixes en aluminium, verre ou polycarbonate pour transformer une véranda ou un auvent en véritable pièce à vivre isolée.</p>
@@ -1815,7 +1818,7 @@
         </div>
       </div>
       <div class="alu-card">
-        <div class="alu-visual"><img loading="lazy" class="lightbox-trigger" src="images/site/alu-revetements-facade.jpg" alt="Revêtements de façade"></div>
+        <div class="alu-visual"><img width="640" height="460" loading="lazy" class="lightbox-trigger" src="images/site/alu-revetements-facade.jpg" alt="Revêtements de façade"></div>
         <div class="alu-body">
           <h4 id="alu-facade">Revêtements de façade</h4>
           <p>Bardage aluminium thermolaqué pour moderniser une façade, un garage ou une clôture, sans travaux lourds.</p>
@@ -1876,44 +1879,44 @@
     </div>
 
     <div class="real-grid active" id="real-panel-garage" data-real-panel="garage">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-01.jpg" alt="Porte de garage sectionnelle blanche installée par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-02.jpg" alt="Porte de garage sectionnelle imitation bois installée par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-03.jpg" alt="Porte de garage sectionnelle anthracite installée par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-04.jpg" alt="Porte de garage sectionnelle blanche avec hublot, installation Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-05.jpg" alt="Double porte de garage sectionnelle blanche installée par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-06.jpg" alt="Porte de garage sectionnelle cintrée avec portillon intégré, Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-07.jpg" alt="Porte de garage sectionnelle blanche avec portillon, vue intérieure, Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-08.jpg" alt="Porte de garage sectionnelle gris anthracite sur façade brique, Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-09.jpg" alt="Porte de garage sectionnelle anthracite sur maison en briques, Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-10.jpg" alt="Porte de garage sectionnelle claire sur façade brique, installation Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-11.jpg" alt="Porte de garage sectionnelle anthracite avec hublots, installation Fermotek">
+      <img width="640" height="853" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-01.jpg" alt="Porte de garage sectionnelle blanche installée par Fermotek">
+      <img width="640" height="800" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-02.jpg" alt="Porte de garage sectionnelle imitation bois installée par Fermotek">
+      <img width="640" height="800" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-03.jpg" alt="Porte de garage sectionnelle anthracite installée par Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-04.jpg" alt="Porte de garage sectionnelle blanche avec hublot, installation Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-05.jpg" alt="Double porte de garage sectionnelle blanche installée par Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-06.jpg" alt="Porte de garage sectionnelle cintrée avec portillon intégré, Fermotek">
+      <img width="640" height="479" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-07.jpg" alt="Porte de garage sectionnelle blanche avec portillon, vue intérieure, Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-08.jpg" alt="Porte de garage sectionnelle gris anthracite sur façade brique, Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-09.jpg" alt="Porte de garage sectionnelle anthracite sur maison en briques, Fermotek">
+      <img width="640" height="853" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-10.jpg" alt="Porte de garage sectionnelle claire sur façade brique, installation Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/porte-garage-11.jpg" alt="Porte de garage sectionnelle anthracite avec hublots, installation Fermotek">
     </div>
 
     <div class="real-grid" id="real-panel-portail" data-real-panel="portail">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-01.jpg" alt="Portail aluminium anthracite à lames horizontales installé par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-02.jpg" alt="Grand portail battant blanc à barreaudage installé par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-03.jpg" alt="Portail aluminium anthracite avec boîte aux lettres intégrée, Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-04.jpg" alt="Portail battant noir motorisé installé par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-05.jpg" alt="Portail aluminium anthracite cintré à barreaudage, Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-06.jpg" alt="Portail aluminium anthracite à motifs verticaux, installation Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-07.jpg" alt="Portail aluminium gris à lames diagonales motorisé, Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-08.jpg" alt="Portail imitation bois assorti à sa clôture, installation Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-09.jpg" alt="Portail aluminium anthracite cintré avec portillon assorti, Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-10.jpg" alt="Portail battant aluminium cintré installé par Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-01.jpg" alt="Portail aluminium anthracite à lames horizontales installé par Fermotek">
+      <img width="640" height="853" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-02.jpg" alt="Grand portail battant blanc à barreaudage installé par Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-03.jpg" alt="Portail aluminium anthracite avec boîte aux lettres intégrée, Fermotek">
+      <img width="640" height="853" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-04.jpg" alt="Portail battant noir motorisé installé par Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-05.jpg" alt="Portail aluminium anthracite cintré à barreaudage, Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-06.jpg" alt="Portail aluminium anthracite à motifs verticaux, installation Fermotek">
+      <img width="640" height="853" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-07.jpg" alt="Portail aluminium gris à lames diagonales motorisé, Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-08.jpg" alt="Portail imitation bois assorti à sa clôture, installation Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-09.jpg" alt="Portail aluminium anthracite cintré avec portillon assorti, Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-10.jpg" alt="Portail battant aluminium cintré installé par Fermotek">
     </div>
 
     <div class="real-grid" id="real-panel-rideau" data-real-panel="rideau">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-01.jpg" alt="Rideau métallique blanc installé sur bâtiment professionnel par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-02.jpg" alt="Rideau métallique anthracite installé sur façade brique par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-03.jpg" alt="Rideau métallique argenté installé sur bâtiment municipal par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-04.jpg" alt="Rideaux métalliques anthracite sur hangar agricole, installation Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-05.jpg" alt="Rideau métallique vert foncé installé sur bâtiment bois, Fermotek">
+      <img width="640" height="1137" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-01.jpg" alt="Rideau métallique blanc installé sur bâtiment professionnel par Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-02.jpg" alt="Rideau métallique anthracite installé sur façade brique par Fermotek">
+      <img width="640" height="852" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-03.jpg" alt="Rideau métallique argenté installé sur bâtiment municipal par Fermotek">
+      <img width="640" height="853" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-04.jpg" alt="Rideaux métalliques anthracite sur hangar agricole, installation Fermotek">
+      <img width="640" height="360" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/rideau-metallique-05.jpg" alt="Rideau métallique vert foncé installé sur bâtiment bois, Fermotek">
     </div>
 
     <div class="real-grid" id="real-panel-cloture" data-real-panel="cloture">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portillon-01.jpg" alt="Portillon aluminium gris anthracite installé par Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-08.jpg" alt="Portail et clôture assortis imitation bois, installation Fermotek">
-      <img class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-02.jpg" alt="Grand portail et clôture à barreaudage blanc, installation Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portillon-01.jpg" alt="Portillon aluminium gris anthracite installé par Fermotek">
+      <img width="640" height="480" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-08.jpg" alt="Portail et clôture assortis imitation bois, installation Fermotek">
+      <img width="640" height="853" class="lightbox-trigger" loading="lazy" src="images/realisations/thumbs/portail-02.jpg" alt="Grand portail et clôture à barreaudage blanc, installation Fermotek">
     </div>
 
     <p style="margin-top:26px; color:var(--ink-soft); font-size:.92rem;">Vous voulez voir d'autres exemples proches de votre projet ? Un conseiller Fermotek peut vous montrer des réalisations similaires à la vôtre.</p>
@@ -2781,7 +2784,7 @@
     <div class="footer-grid">
       <div>
         <div class="brand" style="margin-bottom:16px;">
-          <img loading="lazy" src="images/site/logo-fermotek.png" alt="Fermotek — Portails et portes de garage" class="brand-logo">
+          <img width="500" height="96" loading="lazy" src="images/site/logo-fermotek.png" alt="Fermotek — Portails et portes de garage" class="brand-logo">
         </div>
         <p style="font-size:.86rem; max-width:32ch;">Portails, portes de garage, rideaux métalliques, clôtures et garde-corps. Fabrication européenne, garantie 10 ans.</p>
       </div>
