@@ -896,7 +896,50 @@
     .subnav-wrap{margin:0 -18px 26px; padding:10px 18px; top:0;}
   }
 
-  </style>
+  
+  /* ---- Assistant Fermotek (questions fréquentes) ---- */
+  .fa-toggle{position:fixed; left:18px; bottom:20px; z-index:70; display:flex; align-items:center; gap:8px; background:var(--navy-950); color:#fff; border:1px solid rgba(255,255,255,.22); border-radius:999px; padding:13px 18px; font:600 .86rem/1 'Inter',system-ui,sans-serif; cursor:pointer; box-shadow:0 6px 18px rgba(10,20,40,.28); transition:transform .15s ease, box-shadow .15s ease;}
+  .fa-toggle:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(10,20,40,.34);}
+  .fa-toggle svg{width:20px; height:20px; flex-shrink:0; color:var(--cyan-300);}
+  .fa-toggle:focus-visible,.fa-panel button:focus-visible,.fa-panel a:focus-visible,.fa-panel input:focus-visible,.fa-panel textarea:focus-visible{outline:3px solid var(--amber-400); outline-offset:2px;}
+  .fa-panel{position:fixed; left:18px; bottom:76px; z-index:71; width:370px; max-width:calc(100vw - 24px); height:min(560px, calc(100vh - 110px)); background:#fff; color:var(--ink); border-radius:18px; box-shadow:0 24px 60px -12px rgba(10,36,54,.5); display:none; flex-direction:column; overflow:hidden; font-family:'Inter',system-ui,sans-serif;}
+  .fa-panel.open{display:flex;}
+  .fa-head{background:var(--grad-navy); color:#fff; padding:14px 16px; display:flex; align-items:center; gap:10px;}
+  .fa-head b{display:block; font-size:.95rem;}
+  .fa-head span{display:block; font-size:.74rem; color:rgba(255,255,255,.72);}
+  .fa-close{margin-left:auto; background:none; border:none; color:#fff; font-size:1.5rem; line-height:1; cursor:pointer; padding:4px 8px; border-radius:8px;}
+  .fa-close:hover{background:rgba(255,255,255,.12);}
+  .fa-log{flex:1; overflow-y:auto; padding:14px 14px 6px; display:flex; flex-direction:column; gap:10px; background:var(--paper);}
+  .fa-msg{max-width:88%; padding:10px 13px; border-radius:14px; font-size:.88rem; line-height:1.45; white-space:pre-line;}
+  .fa-bot{background:#fff; border:1px solid var(--steel-100); align-self:flex-start; border-bottom-left-radius:4px;}
+  .fa-user{background:var(--navy-800); color:#fff; align-self:flex-end; border-bottom-right-radius:4px;}
+  .fa-chips,.fa-actions{display:flex; flex-wrap:wrap; gap:7px; align-self:flex-start; max-width:100%;}
+  .fa-chip{background:#fff; border:1px solid var(--cyan-500); color:var(--navy-800); border-radius:999px; padding:7px 12px; font:600 .78rem/1.2 'Inter',system-ui,sans-serif; cursor:pointer;}
+  .fa-chip:hover{background:var(--cyan-500); color:#fff;}
+  .fa-act{display:inline-flex; align-items:center; gap:6px; text-decoration:none; border:none; border-radius:999px; padding:9px 14px; font:700 .78rem/1.2 'Inter',system-ui,sans-serif; cursor:pointer;}
+  .fa-act.wa{background:#25D366; color:#fff;}
+  .fa-act.devis{background:var(--amber-500); color:var(--navy-950);}
+  .fa-act.tel{background:var(--navy-800); color:#fff;}
+  .fa-act.rappel{background:#fff; color:var(--navy-800); border:1px solid var(--navy-800);}
+  .fa-form{background:#fff; border:1px solid var(--steel-100); border-radius:14px; padding:12px; display:flex; flex-direction:column; gap:8px; align-self:stretch;}
+  .fa-form label{font-size:.74rem; font-weight:600; color:var(--ink-soft);}
+  .fa-form input,.fa-form textarea{width:100%; border:1px solid var(--steel-300); border-radius:8px; padding:8px 10px; font:.86rem 'Inter',system-ui,sans-serif; color:var(--ink);}
+  .fa-form textarea{min-height:60px; resize:vertical;}
+  .fa-form .fa-hp{position:absolute; left:-9999px; width:1px; height:1px; opacity:0;}
+  .fa-form button{background:var(--amber-500); color:var(--navy-950); border:none; border-radius:999px; padding:10px 14px; font:700 .84rem/1 'Inter',system-ui,sans-serif; cursor:pointer;}
+  .fa-form small{font-size:.7rem; color:var(--ink-soft);}
+  .fa-err{color:#B3261E; font-size:.76rem;}
+  .fa-input{display:flex; gap:8px; padding:10px 12px; border-top:1px solid var(--steel-100); background:#fff;}
+  .fa-input input{flex:1; border:1px solid var(--steel-300); border-radius:999px; padding:10px 14px; font:.88rem 'Inter',system-ui,sans-serif; min-width:0;}
+  .fa-input button{background:var(--cyan-500); color:#fff; border:none; border-radius:999px; padding:0 16px; font:700 .84rem/1 'Inter',system-ui,sans-serif; cursor:pointer;}
+  .fa-note{font-size:.68rem; color:var(--ink-soft); text-align:center; padding:0 12px 8px; background:#fff;}
+  @media (max-width:560px){
+    .fa-toggle{left:12px; bottom:16px; padding:0; width:52px; height:52px; justify-content:center;}
+    .fa-toggle span{display:none;}
+    .fa-panel{left:8px; right:8px; bottom:76px; width:auto; max-width:none; height:min(520px, calc(100vh - 96px));}
+  }
+  @media (prefers-reduced-motion:reduce){.fa-toggle{transition:none;}}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -2831,6 +2874,28 @@
   </a>
 </div>
 
+<!-- ============ ASSISTANT FERMOTEK ============ -->
+<form name="assistant" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="hidden" name="form-name" value="assistant">
+  <input name="bot-field"><input name="prenom"><input name="tel"><input name="email"><textarea name="question"></textarea>
+</form>
+<button class="fa-toggle" id="faToggle" type="button" aria-expanded="false" aria-controls="faPanel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.4A8 8 0 1 1 21 12Z"/><path d="M9 11h6M9 14h4"/></svg>
+  <span>Une question ?</span>
+</button>
+<div class="fa-panel" id="faPanel" role="dialog" aria-label="Assistant Fermotek">
+  <div class="fa-head">
+    <div><b>Assistant Fermotek</b><span>Réponses immédiates · conseiller sous 24h ouvrées</span></div>
+    <button class="fa-close" id="faClose" type="button" aria-label="Fermer l'assistant">&times;</button>
+  </div>
+  <div class="fa-log" id="faLog" aria-live="polite"></div>
+  <form class="fa-input" id="faAsk" autocomplete="off">
+    <input id="faText" type="text" maxlength="200" placeholder="Posez votre question…" aria-label="Votre question">
+    <button type="submit">Envoyer</button>
+  </form>
+  <div class="fa-note">Réponses automatiques établies à partir des informations du site. Un conseiller confirme tout projet.</div>
+</div>
+
 <div id="lightboxModal" aria-hidden="true">
   <div id="lightboxClose" aria-label="Fermer">&times;</div>
   <figure>
@@ -4592,5 +4657,137 @@
 
 })();
 </script>
+<script>
+(function(){
+  var toggle=document.getElementById('faToggle'), panel=document.getElementById('faPanel'),
+      log=document.getElementById('faLog'), ask=document.getElementById('faAsk'),
+      text=document.getElementById('faText'), closeBtn=document.getElementById('faClose');
+  if(!toggle||!panel) return;
+  var WA='https://wa.me/33677940260?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20produits%20Fermotek.';
+  var lastUnknown='';
+
+  /* Base de connaissances : uniquement des informations déjà présentes sur le site */
+  var KB=[
+    {id:'delai-portail',label:'Délais',k:['delai','semaine','quand','fabrication'],
+     a:'Pour un portail aluminium 100 % sur mesure (gammes Village, Pierres Gemmes, Beryl, Var, Fluviale, City), comptez en moyenne 6 à 10 semaines de fabrication. La gamme Régionale en RAL 7016 est plus rapide : 3 à 4 semaines.\nUn conseiller vous donne un délai précis après étude de votre projet.'},
+    {id:'garantie',label:'Garanties',k:['garantie','garanti','sav','soudure','thermolaquage','durabilite','duree de vie'],
+     a:'Portails aluminium sur mesure : 25 ans de garantie en fabrication et 25 ans sur le thermolaquage, avec une garantie à vie sur la soudure pour les gammes mécano-soudées.\nPour nos fermetures en général, la garantie produit est de 10 ans.'},
+    {id:'livraison',label:'Livraison & pose',k:['livraison','livrer','livre','pose','poser','installation','installer','transport','expedi'],
+     a:'Fermotek est votre interlocuteur unique : vos portails, clôtures et garde-corps sont livrés prêts à poser, sur toute la France, avec notre propre flotte.\nLa pose est assurée par vos équipes ou votre réseau d’installateurs.'},
+    {id:'couleurs',label:'Coloris',k:['couleur','coloris','ral','teinte','anthracite','bicolore','imitation bois','finition'],
+     a:'Les gammes sur mesure proposent 31 coloris standards, et plus de 200 coloris RAL supplémentaires sont disponibles en option. Les finitions bicolores et imitation bois existent sur la gamme Fluviale.\nPour les portes de garage, plus de 200 coloris sont également disponibles. La gamme Régionale est proposée en RAL 7016, 9010 ou 8014.'},
+    {id:'motorisation',label:'Motorisation',k:['motor','moteur','automatique','telecommande','somfy','sommer','domotique','automatis'],
+     a:'Tous nos portails (battants et coulissants) sont disponibles motorisés, avec une motorisation certifiée. Vous pouvez aussi choisir le mode manuel et faire motoriser plus tard.\nPour les portes de garage : motorisation Sommer, ou expérience domotique pilotable à distance avec Somfy. Pour l’industriel, motorisations Sommer adaptées à un usage intensif.'},
+    {id:'normes',label:'Normes',k:['norme','certif','conforme','conformite','13241','iso','marquage','securite'],
+     a:'Nos portes sont conformes à la norme européenne NF EN 13241-1, testées aux intempéries et à l’usage intensif. Motorisations certifiées CE, et certification ISO 9001.'},
+    {id:'mesures',label:'Prise de mesures',k:['mesure','dimension','relev','metrage','faisabilite','cote'],
+     a:'Après votre demande de devis, un conseiller Fermotek échange avec vous pour valider les mesures et la faisabilité technique (motorisation, alimentation électrique, portillon intégré…), à partir des relevés effectués sur le chantier.'},
+    {id:'devis',label:'Devis',k:['devis','tarif','prix','cout','combien','budget','chiffrage','chiffrer','estimation'],
+     a:'Nos produits sont fabriqués sur mesure et livrés sur devis : le prix dépend de vos dimensions, de la gamme, du coloris et des options.\nVous pouvez chiffrer votre projet avec le configurateur en ligne, puis envoyer votre demande. Un conseiller vous répond sous 24h ouvrées.'},
+    {id:'contact',label:'Contact',k:['contact','telephone','appeler','joindre','horaire','ouvert','adresse','email','mail','carvin','parler','conseiller'],
+     a:'Fermotek est basé à Carvin (62220). Téléphone : 06 77 94 02 60, du lundi au vendredi. Email : fermotek.expert@gmail.com. Réponse sous 24h ouvrées.'},
+    {id:'produits',label:'Nos produits',k:['produit','gamme','propose','proposez','vendez','vendre','catalogue','type de','quels','rideau','cloture','garde corps'],
+     a:'Fermotek propose, sur mesure : portes de garage sectionnelles (plafond, latérale, battante) et industrielles, portails aluminium et acier, rideaux métalliques, clôtures et garde-corps. Côté aménagements extérieurs : vérandas, pergolas bioclimatiques, carports, parois coulissantes, protections solaires et revêtements de façade.\nLes catalogues sont téléchargeables dans la rubrique Catalogues du site.'},
+    {id:'clients',label:'Particuliers / pros',k:['particulier','professionnel','artisan','installateur','bailleur','revendeur','entreprise'],
+     a:'Fermotek s’adresse aux professionnels du bâtiment : artisans, installateurs, bailleurs collectifs. Si vous êtes dans une autre situation, dites-le à un conseiller : il vous orientera.'},
+    {id:'portail-ancien',label:'Portail à l’identique',k:['identique','ancien','remplac','reproduction','copie','existant','sur plan'],
+     a:'Oui : chez Fermotek, la reproduction à l’identique de portails anciens est possible, sans limite technique ou créative. Un conseiller étudie votre projet avec vous.'},
+    {id:'amenagements',label:'Aménagements extérieurs',k:['veranda','jardin d hiver','pergola','carport','paroi','baie','store','screen','facade','amenagement','terrasse'],
+     a:'Côté aménagements extérieurs, Fermotek propose : vérandas et jardins d\u2019hiver, pergolas bioclimatiques (toit à lames orientables piloté par télécommande), carports, parois et baies coulissantes (2 à 6 rails), protections solaires et screens motorisés, et revêtements de façade.\nVous pouvez chiffrer votre projet dans le configurateur, rubrique Aménagement extérieur.'},
+    {id:'garage',label:'Portes de garage',k:['porte de garage','garage','sectionnelle','isolee','isolation','hublot','laterale','battante'],
+     a:'Nos portes de garage sectionnelles existent en trois ouvertures (plafond, latérale, battante), avec un panneau isolé de 40 mm d’épaisseur et plus de 200 coloris. Hublots, décors et motorisation se choisissent dans le configurateur.\nPour les ateliers et entrepôts : portes industrielles Zéphir (vitrée ou pleine tôle) et Levante.'}
+  ];
+  var CHIPS=['delai-portail','garantie','livraison','couleurs','motorisation','devis','contact'];
+
+  function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9 ]+/g,' ').replace(/\s+/g,' ').trim();}
+  function add(cls,html,isText){var d=document.createElement('div'); d.className='fa-msg '+cls; if(isText){d.textContent=html;} else {d.innerHTML=html;} log.appendChild(d); log.scrollTop=log.scrollHeight; return d;}
+  function addEl(el){log.appendChild(el); log.scrollTop=log.scrollHeight;}
+  function actions(withRappel){
+    var w=document.createElement('div'); w.className='fa-actions';
+    w.innerHTML='<a class="fa-act wa" href="'+WA+'" target="_blank" rel="noopener">WhatsApp</a>'+
+      '<a class="fa-act devis" href="#devis" data-fa-close="1">Demander un devis</a>'+
+      '<a class="fa-act tel" href="tel:+33677940260">Appeler</a>'+
+      (withRappel?'<button class="fa-act rappel" type="button" data-fa-rappel="1">Être rappelé</button>':'');
+    addEl(w);
+  }
+  function chips(){
+    var w=document.createElement('div'); w.className='fa-chips';
+    CHIPS.forEach(function(id){var e=KB.filter(function(x){return x.id===id;})[0]; var b=document.createElement('button'); b.type='button'; b.className='fa-chip'; b.textContent=e.label; b.setAttribute('data-fa-id',id); w.appendChild(b);});
+    addEl(w);
+  }
+  function answerById(id){var e=KB.filter(function(x){return x.id===id;})[0]; if(!e) return; add('fa-bot',e.a,true); actions(false);}
+
+  function match(q){
+    var n=' '+norm(q)+' ', best=null, bestScore=0;
+    KB.forEach(function(e){
+      var s=0; e.k.forEach(function(w){var nw=norm(w); if(!nw) return; var hit=nw.length<=4 ? (n.indexOf(' '+nw+' ')!==-1||n.indexOf(' '+nw+'s ')!==-1) : n.indexOf(nw)!==-1; if(hit){ s+=nw.length; }});
+      if(s>bestScore){bestScore=s; best=e;}
+    });
+    return bestScore>0?best:null;
+  }
+  function handle(q){
+    var n=norm(q);
+    add('fa-user',q,true);
+    if(/^(bonjour|bonsoir|salut|hello|coucou)( |$)/.test(n) && n.split(' ').length<=3){add('fa-bot','Bonjour ! Posez votre question ou choisissez un sujet ci-dessous.',true); chips(); return;}
+    if(/^(merci|super|parfait|ok merci)( |$)/.test(n) && n.split(' ').length<=4){add('fa-bot','Avec plaisir ! N’hésitez pas si vous avez une autre question.',true); return;}
+    var e=match(q);
+    if(e){add('fa-bot',e.a,true); actions(false); return;}
+    lastUnknown=q;
+    add('fa-bot','Je n’ai pas de réponse précise à cette question dans les informations du site. Un conseiller Fermotek vous répond sous 24h ouvrées : choisissez le moyen le plus simple pour vous.',true);
+    actions(true);
+  }
+
+  function showForm(){
+    var f=document.createElement('form'); f.className='fa-form'; f.setAttribute('autocomplete','on');
+    f.innerHTML='<label for="faPrenom">Prénom</label><input id="faPrenom" name="prenom" required maxlength="60" autocomplete="given-name">'+
+      '<label for="faTel">Téléphone</label><input id="faTel" name="tel" type="tel" maxlength="30" autocomplete="tel">'+
+      '<label for="faMail">Email</label><input id="faMail" name="email" type="email" maxlength="100" autocomplete="email">'+
+      '<label for="faQ">Votre question</label><textarea id="faQ" name="question" maxlength="600"></textarea>'+
+      '<input class="fa-hp" name="bot-field" tabindex="-1" autocomplete="off" aria-hidden="true">'+
+      '<div class="fa-err" role="alert"></div>'+
+      '<button type="submit">Envoyer ma demande</button>'+
+      '<small>Vos coordonnées servent uniquement à vous recontacter au sujet de cette demande.</small>';
+    f.querySelector('#faQ').value=lastUnknown;
+    f.addEventListener('submit',function(ev){
+      ev.preventDefault();
+      var prenom=f.prenom.value.trim(), tel=f.tel.value.trim(), email=f.email.value.trim(), q=f.question.value.trim(), err=f.querySelector('.fa-err');
+      if(f['bot-field'].value){return;}
+      if(!prenom){err.textContent='Merci d’indiquer votre prénom.'; return;}
+      if(!tel && !email){err.textContent='Merci d’indiquer un téléphone ou un email pour vous recontacter.'; return;}
+      if(email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent='Cet email ne semble pas valide.'; return;}
+      if(!q){err.textContent='Merci de préciser votre question.'; return;}
+      err.textContent='';
+      var btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Envoi…';
+      var body=new URLSearchParams({'form-name':'assistant',prenom:prenom,tel:tel,email:email,question:q}).toString();
+      fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).then(function(r){
+        if(!r.ok) throw new Error('http '+r.status);
+        f.remove(); add('fa-bot','Merci '+prenom+', votre question est bien transmise. Un conseiller Fermotek vous recontacte sous 24h ouvrées.',true);
+      }).catch(function(){
+        btn.disabled=false; btn.textContent='Envoyer ma demande';
+        err.textContent='L’envoi a échoué. Vous pouvez nous joindre par WhatsApp ou au 06 77 94 02 60.';
+      });
+    });
+    addEl(f); f.querySelector('#faPrenom').focus();
+  }
+
+  function openPanel(){
+    panel.classList.add('open'); toggle.setAttribute('aria-expanded','true');
+    if(!log.children.length){add('fa-bot','Bonjour, je suis l’assistant Fermotek. Posez votre question, ou choisissez un sujet :',true); chips();}
+    setTimeout(function(){text.focus();},50);
+  }
+  function closePanel(){panel.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); toggle.focus();}
+
+  toggle.addEventListener('click',function(){panel.classList.contains('open')?closePanel():openPanel();});
+  closeBtn.addEventListener('click',closePanel);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&panel.classList.contains('open')) closePanel();});
+  ask.addEventListener('submit',function(e){e.preventDefault(); var q=text.value.trim(); if(!q) return; text.value=''; handle(q);});
+  log.addEventListener('click',function(e){
+    var c=e.target.closest('[data-fa-id]'); if(c){var id=c.getAttribute('data-fa-id'); var en=KB.filter(function(x){return x.id===id;})[0]; add('fa-user',en.label,true); answerById(id); return;}
+    if(e.target.closest('[data-fa-rappel]')){showForm(); return;}
+    if(e.target.closest('[data-fa-close]')){panel.classList.remove('open'); toggle.setAttribute('aria-expanded','false');}
+  });
+})();
+</script>
+
 </body>
 </html>
