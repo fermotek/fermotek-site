@@ -2797,6 +2797,11 @@
           <input type="text" id="f-modele" name="modele" placeholder="Ex. Alizée, Zéphir…">
         </div>
         <div class="field">
+          <label for="f-dimensions">Dimensions (largeur x hauteur, facultatif)</label>
+          <input type="text" id="f-dimensions" name="dimensions" placeholder="Ex. 2500 x 2125 mm">
+        </div>
+        <input type="hidden" id="f-subject" name="subject" value="Demande de prix via le site fermotek.net">
+        <div class="field">
           <label for="f-message">Votre message</label>
           <textarea id="f-message" name="message" placeholder="Dimensions, couleur souhaitée, délai, questions particulières…"></textarea>
         </div>
@@ -3441,6 +3446,7 @@
         'Porte industrielle': 'Porte de garage industrielle'
       };
       document.getElementById('f-type').value = typeMap[state.ouverture] || '';
+      document.getElementById('f-dimensions').value = (typeof dims !== 'undefined' && !/^(non renseign|Non renseign)/.test(dims)) ? dims : '';
       document.getElementById('f-modele').value = (state.ouverture || '') + (state.modele ? (' — ' + state.modele) : '');
       var msgField = document.getElementById('f-message');
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
@@ -3761,6 +3767,7 @@
         '- Décor Aluminox : ' + (state.decor || '—')
       ].join('\n');
       document.getElementById('f-type').value = 'Portail';
+      document.getElementById('f-dimensions').value = (typeof dims !== 'undefined' && !/^(non renseign|Non renseign)/.test(dims)) ? dims : '';
       document.getElementById('f-modele').value = (state.gamme || 'Portail') + (state.modele ? (' — ' + state.modele) : '');
       var msgField = document.getElementById('f-message');
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
@@ -3905,6 +3912,7 @@
         '- Motif découpe laser : ' + (state.motif || '—')
       ].join('\n');
       document.getElementById('f-type').value = 'Clôture';
+      document.getElementById('f-dimensions').value = (typeof dims !== 'undefined' && !/^(non renseign|Non renseign)/.test(dims)) ? dims : '';
       document.getElementById('f-modele').value = (state.orientation || 'Clôture') + (state.finition ? (' — ' + state.finition) : '');
       var msgField = document.getElementById('f-message');
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
@@ -4044,6 +4052,7 @@
         '- Main courante : ' + (state.maincourante || '—')
       ].join('\n');
       document.getElementById('f-type').value = 'Garde-corps';
+      document.getElementById('f-dimensions').value = (typeof dims !== 'undefined' && !/^(non renseign|Non renseign)/.test(dims)) ? dims : '';
       document.getElementById('f-modele').value = (state.config || 'Garde-corps') + (state.remplissage ? (' — ' + state.remplissage) : '');
       var msgField = document.getElementById('f-message');
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
@@ -4188,6 +4197,7 @@
         '- Télécommande / accès : ' + (state.telecommande || '—')
       ].join('\n');
       document.getElementById('f-type').value = 'Rideau métallique';
+      document.getElementById('f-dimensions').value = (typeof dims !== 'undefined' && !/^(non renseign|Non renseign)/.test(dims)) ? dims : '';
       document.getElementById('f-modele').value = 'Rideau métallique' + (state.usage ? (' — ' + state.usage) : '');
       var msgField = document.getElementById('f-message');
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
@@ -4360,6 +4370,7 @@
         '- Protection solaire additionnelle : ' + (state.protection || '—')
       ].join('\n');
       document.getElementById('f-type').value = 'Gamme aluminium (véranda, pergola, carport…)';
+      document.getElementById('f-dimensions').value = (typeof dims !== 'undefined' && !/^(non renseign|Non renseign)/.test(dims)) ? dims : '';
       document.getElementById('f-modele').value = (state.produit || 'Aménagement extérieur') + (state.modele ? (' — ' + state.modele) : '');
       var msgField = document.getElementById('f-message');
       msgField.value = summary + (msgField.value && msgField.value.indexOf('Configuration réalisée') === -1 ? ('\n\n' + msgField.value) : '');
@@ -4470,6 +4481,7 @@
     var consent = document.getElementById('f-consent').checked;
     var ville = document.getElementById('f-ville').value.trim();
     var modele = document.getElementById('f-modele').value.trim();
+    var dimensions = document.getElementById('f-dimensions').value.trim();
     var message = document.getElementById('f-message').value.trim();
 
     if(!prenom || !nom || !tel || !typeProduit || !consent){
@@ -4490,7 +4502,9 @@
       body: encodeFormData({
         'form-name': 'devis',
         prenom: prenom, nom: nom, tel: tel, email: email, ville: ville,
-        typeProduit: typeProduit, modele: modele, message: message
+        typeProduit: typeProduit, modele: modele, message: message,
+        dimensions: dimensions,
+        subject: 'Demande de prix via le site — ' + typeProduit + ' — ' + prenom + ' ' + nom + (dimensions ? ' — ' + dimensions : '')
       })
     }).catch(function(err){
       console.warn('Envoi Netlify Forms impossible (hors ligne ou site non déployé sur Netlify) :', err);
@@ -4816,7 +4830,7 @@
       if(!q){err.textContent='Merci de préciser votre question.'; return;}
       err.textContent='';
       var btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Envoi…';
-      var body=new URLSearchParams({'form-name':'devis',prenom:prenom,nom:'(via l’assistant du site)',tel:tel,email:email,typeProduit:'Autre demande',message:'[Question posée à l’assistant] '+q}).toString();
+      var body=new URLSearchParams({'form-name':'devis',subject:'Demande de rappel via l’assistant du site — '+prenom,prenom:prenom,nom:'(via l’assistant du site)',tel:tel,email:email,typeProduit:'Autre demande',message:'[Question posée à l’assistant] '+q}).toString();
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).then(function(r){
         if(!r.ok) throw new Error('http '+r.status);
         f.remove(); add('fa-bot','Merci '+prenom+', votre question est bien transmise. Un conseiller Fermotek vous recontacte sous 24h ouvrées.',true);
