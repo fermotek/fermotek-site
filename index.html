@@ -4816,7 +4816,7 @@
       if(!q){err.textContent='Merci de préciser votre question.'; return;}
       err.textContent='';
       var btn=f.querySelector('button'); btn.disabled=true; btn.textContent='Envoi…';
-      var body=new URLSearchParams({'form-name':'assistant',prenom:prenom,tel:tel,email:email,question:q}).toString();
+      var body=new URLSearchParams({'form-name':'devis',prenom:prenom,nom:'(via l’assistant du site)',tel:tel,email:email,typeProduit:'Autre demande',message:'[Question posée à l’assistant] '+q}).toString();
       fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body}).then(function(r){
         if(!r.ok) throw new Error('http '+r.status);
         f.remove(); add('fa-bot','Merci '+prenom+', votre question est bien transmise. Un conseiller Fermotek vous recontacte sous 24h ouvrées.',true);
